@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [Юрий Зайцев](https://htmlacademy.ru/profile/id42293).
-* Наставник: `Unknown`.
+* Наставник: `Алексей Малейков https://htmlacademy.ru/profile/a`.
 
 --
 
