@@ -2,6 +2,7 @@
 
 * Студент: [Юрий Зайцев](https://htmlacademy.ru/profile/id42293).
 * Наставник: `Алексей Малейков https://htmlacademy.ru/profile/a`.
+* [Fork](https://github.com/haschen/42293-Pink).
 
 --
 
