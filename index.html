@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
@@ -14,22 +13,22 @@
     <div class="container">
     
       <div class="logo">Pink</div>
-      <div class="nav-toggle"></div>
+      <a class="nav-toggle"></a>
 
         <!-- main-menu -->
         <nav class="main-nav">
           <ul>
-            <li><a href="#" class="main-nav__item">Информация</a></li>
-            <li><a href="#" class="main-nav__item">Возможности</a></li>
-            <li><a href="#" class="main-nav__item">Отзывы</a></li>
-            <li><a href="#" class="main-nav__item">Стоимость</a></li>
+            <li class="main-nav__item"><a href="#" class="link-nav">Информация</a></li>
+            <li class="main-nav__item"><a href="#navinfo" class="link-nav">Возможности</a></li>
+            <li class="main-nav__item"><a href="#navrewievs" class="link-nav">Отзывы</a></li>
+            <li class="main-nav__item"><a href="#navprice" class="link-nav">Стоимость</a></li>
           </ul>
         </nav>      
 
     </div>
   </header>
 
-  <!-- introo -->
+  <!-- intro -->
   <div class="intro">
     <div class="container">
       
@@ -46,14 +45,14 @@
           <a href="#" class="donload-icons__item" title="Скачать для Windows Phone">Windows Phone</a>
         </div>
 
-        <p>Доступно для iPhone, iPad, Android, Windows&nbspphone, Mac&nbspOS, Windows&nbsp8</p>
+        <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
       </div>
 
     </div>
    </div>
 
   <!-- information -->
-   <section class="information">
+   <section class="information" id="navinfo">
      
      <div class="promo">
       <p class="promo__text">Устали от серости мегаполиса?</p>
@@ -81,31 +80,31 @@
   </section>
 
   <!-- review -->
-  <section class="review">
+  <section class="reviews" id="navrewievs">
     <div class="container">
       
       <!-- slider -->
-      <div class="slider">
+      <div class="slider-reviews">
         
-        <div class="slide-contaner">
+        <div class="slider-reviews__contaner">
           
           <!-- slide -->  
-          <div class="slide  review-item">
-            <h2 class="review-item__title">Николай Петров</h2>
+          <article class="slider-reviews__item  reviews-item">
+            <h2 class="reviews-item__title">Николай Петров</h2>
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
+          </article>
           
-          <!-- slide -->
-          <div class="slide  review-item">
-            <h2 class="review-item__title">Николай Петров</h2>
+          <!-- slide -->  
+          <article class="slider-reviews__item  reviews-item">
+            <h2 class="reviews-item__title">Николай Петров</h2>
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
-
-          <!-- slide -->
-          <div class="slide  review-item">
-            <h2 class="review-item__title">Николай Петров</h2>
+          </article>
+          
+          <!-- slide -->  
+          <article class="slider-reviews__item  reviews-item">
+            <h2 class="reviews-item__title">Николай Петров</h2>
             <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-          </div>
+          </article>
 
         </div>
         
@@ -122,105 +121,78 @@
   </section>
 
   <!-- price -->
-  <div class="price">
+  <div class="price" id="navprice">
     <div class="container">
 
       <!-- slider -->
-      <div class="slider">
+      <div class="slider-price">
         
-        <div class="slide-container">
+        <div class="slider-container">
           
-          <!-- slide -->  
-          <div class="slide  price-item">
-            <table>
-              <tbody>
+          <table>
+            <tbody>
+              <tr>
+                <th>
+                  <h3>База</h3>
+                  <span>1,99 USD</span>
+                </th>
+                <th>
+                  <h3>Стандарт</h3>
+                  <span>3,99 USD</span>
+                </th>
+                <th>
+                  <h3>Анлим</h3>
+                  <span>9,99 USD</span>
+                </th>
+              </tr>
+               
+              <tr>  
+                <td>
+                  Розовый фильтр
+                  <i>да</i>
+                </td>
+                <td>
+                  Розовый фильтр
+                  <i>да</i>
+                </td>  
+                <td>
+                  Розовый фильтр
+                  <i>да</i>
+                </td>
+              </tr>
 
-                <tr colspan="2">
-                  <th>
-                    <h3>База</h3>
-                    <span>1,99 USD</span>
-                  </th>
-                </tr>
-                
-                <tr>  
-                  <td><span>Розовый фильтр</span></td>
-                    <td><i>да</i></td>
-                </tr>
+              <tr>
+                <td>
+                  Смайлики
+                  <i>нет</i>
+                </td>
+                <td>
+                  Смайлики
+                  <i>да</i>
+                </td>
+                <td>
+                  Смайлики
+                  <i>да</i>
+                </td>
+              </tr>
 
-                <tr>
-                  <td><span>Смайлики</span></td>
-                  <td><i>нет</i></td>
-                </tr>
+              <tr>
+                <td> 
+                  Комментарии
+                  <i>нет</i>
+                </td>
+                <td> 
+                  Комментарии
+                  <i>нет</i>
+                </td>
+                <td> 
+                  Комментарии
+                  <i>да</i>
+                </td>
+              </tr>
 
-                <tr>
-                  <td><span>Комментарии</span></td>
-                  <td><i>нет</i></td>
-                </tr>
-
-              </tbody>  
-            </table>
-          </div>
-
-          <!-- slide -->  
-          <div class="slide  price-item">
-            <table>
-              <tbody>
-
-                <tr colspan="2">
-                  <th>
-                    <h3>Стандарт</h3>
-                    <span>3,99 USD</span>
-                  </th>
-                </tr>
-                
-                <tr>  
-                  <td><span>Розовый фильтр</span></td>
-                  <td><i>да</i></td>
-                </tr>
-
-                <tr>
-                  <td><span>Смайлики</span></td>
-                  <td><i>да</i></td>
-                </tr>
-
-                <tr>
-                  <td><span>Комментарии</span></td>
-                  <td><i>нет</i></td>
-                </tr> 
-              </tbody>  
-            </table>
-          </div>
-
-          <!-- slide -->
-          <div class="slide  price-item">
-            <table>
-              <tbody>
-
-                <tr colspan="2">
-                  <th>
-                    <h3>Анлим</h3>
-                    <span>9,99 USD</span>
-                  </th>
-                </tr>
-                
-                <tr>  
-                  <td><span>Розовый фильтр</span></td>
-                  <td><i>да</i></td>
-                </tr>
-
-                <tr>
-                  <td><span>Смайлики</span></td>
-                  <td><i>да</i></td>
-                </tr>
-
-                <tr>
-                  <td><span>Комментарии</span></td>
-                  <td><i>нет</i></td>
-                </tr>
-
-              </tbody>  
-            </table>
-          </div>
+            </tbody>  
+          </table>
 
         </div>
         
@@ -250,21 +222,21 @@
 
         <!-- item --> 
         <div class="contacts-item">
-          <h2 class="contacts-item__title">Звоните</h2>
-          <a href="tel:88001000900" class="contacts-link">8(800) 1000 900</a>
+          <h2 class="contacts-item__title">Звоните:</h2>
+          <a href="tel:88001000900" class="link-contacts">8(800) 1000 900</a>
         </div>
 
         <!-- item -->
         <div class="contacts-item">
-          <h2 class="contacts-item__title">Пишите</h2>
-          <a href="mailto:hello@pinkapp.ru" class="contacts-link">hello@pinkapp.ru</a>
+          <h2 class="contacts-item__title">Пишите:</h2>
+          <a href="mailto:hello@pinkapp.ru" class="link-contacts">hello@pinkapp.ru</a>
         </div>
 
         <!-- item --> 
         <div class="contacts-item">
-          <h2 class="contacts-item__title" class="contacts-link">Приезжайте в гости</h2>
+          <h2 class="contacts-item__title" class="link-contacts">Приезжайте в гости:</h2>
           <address>
-            <a href="#">Санкт-Петербург, Невский&nbspпроспект,&nbspд.&nbsp20</a>
+            <a href="#">Санкт-Петербург, Невский&nbsp;проспект,&nbsp;д.&nbsp;20</a>
           </address>
         </div>
 
