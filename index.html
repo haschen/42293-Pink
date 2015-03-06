@@ -4,35 +4,42 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Pink</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
   <!-- header -->
   <header class="page-header">
-    <div class="container">
 
-      <a href="#" class="logo">Pink</a>
+    <!-- main-menu -->
+    <nav class="main-nav">
 
-      <!-- main-menu -->
-      <nav class="main-nav">
+      <div class="container">
+
+        <h1 class="logo"><a href="#">Pink</a></h1>
+
         <a href="#" class="main-nav__toggle"></a>
-          <ul>
+          <ul class="main-nav__list">
             <li class="main-nav__item"><a href="#">Информация</a></li>
             <li class="main-nav__item"><a href="#navinfo">Возможности</a></li>
             <li class="main-nav__item"><a href="#navrewievs">Отзывы</a></li>
             <li class="main-nav__item"><a href="#navprice">Стоимость</a></li>
           </ul>
-      </nav>
+      </div>
 
-    </div>
+    </nav>
   </header>
 
   <!-- intro -->
   <div class="intro">
     <div class="container">
 
-      <h1 class="intro__title">Взгляните на жизнь ярче!</h1>
+      <span class="promo-text">Взгляните на жизнь иначе!</span>
       <div class="intro__image"></div>
 
       <!-- donload -->
@@ -40,9 +47,9 @@
         <a href="#" class="btn" title="Скачать для IPhone">Скачать приложение</a>
 
         <div class="download-icons">
-          <a href="#" class="download-icons__item" title="Скачать для IPhone">Iphone</a>
-          <a href="#" class="download-icons__item" title="Скачать для Android">Android</a>
-          <a href="#" class="download-icons__item" title="Скачать для Windows Phone">Windows Phone</a>
+          <a href="#" class="download-icons__item download-icons__item--iphone" title="Скачать для IPhone">Iphone</a>
+          <a href="#" class="download-icons__item download-icons__item--android" title="Скачать для Android">Android</a>
+          <a href="#" class="download-icons__item download-icons__item--win" title="Скачать для Windows Phone">Windows Phone</a>
         </div>
 
         <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
@@ -51,32 +58,36 @@
     </div>
   </div>
 
+    <div class="promo">
+      <div class="container">
+        <p class="promo-text">Устали от серости мегаполиса?</p>
+        <p class="promo-text">Нам есть, что вам предложить!</p>
+      </div>
+    </div>
+
   <!-- information -->
   <section class="information" id="navinfo">
+    <div class="container">
 
-    <div class="promo">
-      <p class="promo__text">Устали от серости мегаполиса?</p>
-      <p class="promo__text">Нам есть, что вам предложить!</p>
+      <!-- item -->
+      <div class="information-item">
+        <h2 class="information-item__title">Поднимает настроение</h2>
+        <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+      </div>
+
+      <!-- item -->
+      <div class="information-item">
+        <h2 class="information-item__title">Меняет мир вокруг</h2>
+        <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+      </div>
+
+      <!-- item -->
+      <div class="information-item">
+        <h2 class="information-item__title">Заводит новых друзей</h2>
+        <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+      </div>
+
     </div>
-
-    <!-- item -->
-    <div class="information-item">
-      <h2 class="information-item__title">Поднимает настроение</h2>
-      <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
-    </div>
-
-    <!-- item -->
-    <div class="information-item">
-      <h2 class="information-item__title">Меняет мир вокруг</h2>
-      <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-    </div>
-
-    <!-- item -->
-    <div class="information-item">
-      <h2 class="information-item__title">Заводит новых друзей</h2>
-      <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-    </div>
-
   </section>
 
   <!-- review -->
@@ -251,8 +262,8 @@
     <div class="container">
 
       <div class="promo">
-        <p class="promo__text">Остались вопросы?</p>
-        <p class="promo__text">Свяжитесь с нами!</p>
+        <p class="promo-text">Остались вопросы?</p>
+        <p class="promo-text">Свяжитесь с нами!</p>
       </div>
 
       <!-- contacts -->
