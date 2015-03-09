@@ -363,8 +363,15 @@ body {
   font: 400 14px/24px "Open Sans", "Arial", sans-serif;
 }
 h1,
-p {
+h2,
+h3,
+p,
+span,
+address {
   margin: 0;
+}
+address {
+  font-size: 0;
 }
 .container {
   position: relative;
@@ -379,7 +386,7 @@ p {
 }
 .promo-text {
   display: block;
-  margin-bottom: 28px;
+  margin-top: 0px;
   text-align: center;
   font-weight: 300;
   font-size: 24px;
@@ -428,27 +435,21 @@ p {
   top: 16px;
 }
 .main-nav__toggle:hover {
-  border-color: #c71585;
+  border-color: #d22856;
 }
 .main-nav__toggle:hover::before,
 .main-nav__toggle:hover::after {
-  background-color: #c71585;
+  background-color: #d22856;
 }
 .main-nav__list {
   display: none;
 }
 /* intro */
 .intro {
-  padding-top: 90px;
+  padding-top: 86px;
+  height: 458px;
   color: #fff;
-  background: #283445 url("../img/intro-bg.jpg") 50% 0 no-repeat;
-}
-.intro__image {
-  position: relative;
-  margin: 0 auto 28px;
-  right: 20px;
-  height: 286px;
-  background: transparent url("../img/intro-image__hand.png") 0 0 no-repeat;
+  background: url("../img/intro-image__hand.png") 89% 119% no-repeat, url("../img/intro-bg.jpg") 49% 70% no-repeat;
 }
 .btn {
   display: block;
@@ -457,37 +458,38 @@ p {
   background-color: transparent;
   border: 3px solid #fff;
   border-radius: 30px;
-  padding: 11px 34px 14px;
+  padding: 0 34px;
   font-size: 1.3em;
+  line-height: 49px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
 }
 .btn:hover {
   background-color: #fff;
-  border-color: #c71585;
-  color: #c71585;
+  border-color: #d22856;
+  color: #d22856;
 }
 .download {
   text-align: center;
-  padding-bottom: 30px;
+  padding: 28px 0 28px;
   font-weight: 300;
+  color: #fff;
+  background-color: #283445;
 }
 .download-icons {
-  margin-bottom: 28px;
-  padding: 0 36px;
+  margin-bottom: 26px;
+  padding: 0 19px;
   font-size: 0;
 }
 .download-icons__item {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: bottom;
+  margin: 0 17px ;
   height: 55px;
   width: 46px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-}
-.download-icons__item:nth-child(2) {
-  margin: 0 35px;
 }
 .download-icons__item--iphone {
   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAA5CAMAAAB+tOkmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAD///////////////////////////////////////////////////////////////8AAADx3eDuAAAAEHRSTlMAQIAgn+8Qj8/fr2BwvzBQTn5oPAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAE5SURBVEjHlZbbloMwCEUVQ65G+f+vHZ1catqu5sBj3AvhACHLMrGVthnSbTMssoKwdXIbiFsvCtyGQgvmvPqWCNFUaUlQKFzpADnfm3Ms0Ra5w2SptMFkWQtNGF3wfID0cuRIE3ilfJk7HxmkeKecTbLvuVGrubArfs8oLzNDG58sT/O0u/FEeH/RJIB1UQ1Cdz5htMi/CgdKl6JlkE7PeoO0Ms8Fo7nW9dSkCVZIpDUNpkteVHifE9bhuky1OBaM0aXqdbi02XMY3m6zHcO5ukeHI6uk6eJEEK88PNiS7/gtjJcfwNGUtYZHU8Y7oDRrKtX60oLSt9sAjL43vUfo0FcI1DiPhQzcNsNCnk6JH7bZTB1+W5vHb/7jmfLkvSFy/hd98fU7t6fg1nZt+L7Akxm39nWd03jyBztjZoUGT4veAAAAAElFTkSuQmCC");
@@ -498,20 +500,206 @@ p {
 .download-icons__item--android {
   background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAvCAMAAACi0KjaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAACkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjkAAACTXjzEAAAAEHRSTlMAjyBAgFCv7xCf32C/cM8wtVBr1AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADySURBVDjL7ZXZEoMgDEXTIoSAS/7/awsBHFsCnWlfvS8GOcZIFgGaHs14mqRnd/uiRXatQxahs/LcoqCeEhj4opBg8goKMRJ/iGLUSPDInVB1Ci5vLetJiek0csv7EXxDl2Juo9c7HxtaTSWEyANFNVJVfbQ4QrFDeSj4Q2aonwIwRPYbaomSc1tTMkMlkRb2eiAzVA4yQFvO0Hq90RuVygpzVIbeDiZXmJ2juabR5Akqk3WGNqaKRiT1M2vVyVUbm0a+kLfS0tJPvB/6KCh+a9+b4hNuVJdreRTJwg3QI1fO+fPJOcBBBqQqLoPXvNUIwAtHxUYW5CJ9BgAAAABJRU5ErkJggg==");
 }
-.promo {
-  padding-top: 45px;
-}
 /* information */
 .information {
   position: relative;
-  background-color: #e9e9e9;
+  padding-top: 43px;
+  overflow: hidden;
 }
-.information::before {
+.information__title {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+}
+.information__wrap {
+  position: relative;
+  background-color: #f2f2f2;
+  padding: 85px 0 288px;
+  overflow: hidden;
+}
+.information__wrap::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 30px;
   width: 100%;
-  background-image: linear-gradient(to bottom right, #ffffff 50%, #e9e9e9 50%);
+  background-image: linear-gradient(to bottom right, #ffffff 50%, #f2f2f2 50%);
+}
+.information::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 26%;
+  height: 320px;
+  width: 157px;
+  background: #f2f2f2 url(../img/information-img.png) 50% 0% no-repeat;
+}
+.information-item {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.information-item__title {
+  margin-bottom: 12px;
+  font: 700 18px/24px "Open Sans", "Arial", sans-serif;
+}
+/* reviews */
+.reviews {
+  position: relative;
+  margin-bottom: 38px;
+  padding-top: 48px;
+  text-align: center;
+}
+.reviews-item {
+  display: none;
+}
+.reviews-item--visible {
+  display: block;
+}
+.reviews-item__title {
+  margin-bottom: 13px;
+  font: 700 18px/24px "Open Sans", "Arial", sans-serif;
+}
+.reviews-item__text {
+  margin: 0;
+  font: 400 14px/30px "Open Sans", "Arial", sans-serif;
+}
+.slider-reviews__container {
+  margin-bottom: 29px;
+}
+.slider-control {
+  font-size: 0;
+  text-align: center;
+}
+.slider-control__item {
+  display: inline-block;
+  box-sizing: content-box;
+  vertical-align: middle;
+  height: 6px;
+  width: 6px;
+  margin: 0 10px;
+  background-color: #b2b2b2;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.slider-control__item--active {
+  margin: 0 7px;
+  background-color: #fff;
+  border: 3px solid #283645;
+}
+.price {
+  position: relative;
+  margin-bottom: 44px;
+  padding: 90px 0 40px;
+  background-color: #f2f2f2;
+}
+.price::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #ffffff 50%, #f2f2f2 50%);
+}
+.price-table {
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+.price-table--hit::before {
+  position: absolute;
+  content: "хит";
+  left: 0;
+  top: 0;
+  padding: 0 50px;
+  text-align: center;
+  font: 600 14px/30px "Open Sans", "Arial", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #d22856;
+  -webkit-transform: translate(-40px, 10px) rotate(-45deg);
+      -ms-transform: translate(-40px, 10px) rotate(-45deg);
+          transform: translate(-40px, 10px) rotate(-45deg);
+  z-index: 2;
+}
+.price-table__header {
+  position: relative;
+  padding: 19px 89px;
+  background-color: #283645;
+  overflow: hidden;
+  box-sizing: content-box;
+  border-left: 2px solid #f2f2f2;
+}
+.price-table__title {
+  font: 700 18px/30px "Open Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+.price-table__cost {
+  font: 300 24px/30px "Open Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+}
+.price-table__cell {
+  position: relative;
+  padding: 0 22px;
+  font: 400 14px/59px "Open Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #283645;
+  background-color: #fff;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+}
+.price-table__cell--yes::after,
+.price-table__cell--no::after {
+  position: absolute;
+  top: 15px;
+  right: 22px;
+  width: 29px;
+  height: 29px;
+  font-size: 0;
+}
+.price-table__cell--yes::after {
+  content: "да";
+  background: #ffffff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAMAAAALimf+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/FBMVEUAAAA9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAACmFVsNAAAAUnRSTlMAUIBiSfjc+e0pNuzpOjDu+kAj4PRNHdFaDmgSuXQoCgSOVfzLFwalilK8CZ6ogr0IjaOUpAGFnGnFDweqj80U/tgiEMZtSPYfFczrNxvi8jPnvonPpQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADISURBVCjPfdBnUwIxFIXhpQlioYMFaQtIB7GjdFBEmu///zHuoDBh2Us+5eTJZHKPpsnLZj+ADpDR6eJIRjeeYwm9J5yeSXjuwx+QMBgiHJEwGoMLCS8NvJLwOg43m5BI7mLKwPQmZPRsTsX8LRS2qQilsqIVqCqxBvXGNt1BM6W+dQ8Pj//7J+Oq6R9NeP7bvcBryzTC2zu016jT6e5NmC+tJ7T16A8sChiOYPzxSWhi2c/XFN3F90yob76A5UoqV0vEfpx7h79VAx3KADMU4gAAAABJRU5ErkJggg==") 50% 0 no-repeat;
+}
+.price-table__cell--no::after {
+  content: "нет";
+  background: #ffffff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEUAAADyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAADrmyZ7AAAAS3RSTlMADmQkC2gqetcnCbPDUf3hHwi1ieAltqIBXyuZ3SGdA2fjYNkKtJph2t+jY9wgBJvTuZzy/M7tlt6YAp9mB6H+4iOe2w1ifbtUkYx2fZrcAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAP1JREFUKM9tkelWwjAQhYeClUVqRZaigFIVkFXZxIqsKst9//dxaDldksyvm3OTbzJ3KKbFSVGJC50ukUzJTjqDK8oauDZF5yYH3BJpQL4gOEWgZLEoA8k7gYZ7y5WagUo1Sqs9nA+PBurVCC24aANPuiefX4CGFcI3gVZcovnMV9OjtcVROkC312faQA6AmW/vwLCviM0eAeMhKWsCTAsq4/Q3zsxUOx/cbybt4ZTbp+PmqctvvhwW87E7X1Df7Cw8OV9itRa24JwP5SBPj7Zx/IudJbbrwCmF8ZxnvifsNJTZlmf/4UQ30S0Q/bren0Dz++1oXz9YskX27PgPxIksRC8/Dz4AAAAASUVORK5CYII=") 50% 0 no-repeat;
+}
+.slider-price__slide {
+  display: none;
+}
+.slider-price__slide--active {
+  display: inline-block;
+}
+.slider-price__container {
+  margin-bottom: 25px;
+}
+/* contacts */
+.contacts {
+  text-align: center;
+}
+.contacts__title {
+  text-align: center;
+  font: 300 24px/28px "Open Sans", "Arial", sans-serif;
+}
+.contacts__title:nth-child(2) {
+  margin-bottom: 35px;
+}
+.contacts-item {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contacts-item__title {
+  font: 700 18px/24px "Open Sans", "Arial", sans-serif;
+}
+.contacts-item a {
+  font: 300 24px/30px "Open Sans", "Arial", sans-serif;
+  color: #d22856;
+  text-decoration: none;
 }
