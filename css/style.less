@@ -8,18 +8,18 @@
   box-sizing: border-box;
 }
 
-
-body {
-  font: 400 14px/24px @font-family;
-}
-
 h1,
 h2,
 h3,
 p,
+ul,
 span,
 address {
   margin: 0;
+}
+
+body {
+  font: 400 14px/24px @font-family;
 }
 
 address {
@@ -40,46 +40,67 @@ address {
 
 }
 
-.promo-text {
-  display: block;
-  margin-top: 0px;
+.slider-control {
+  font-size: 0;
   text-align: center;
-  font-weight: 300;
-  font-size: 24px;
-  line-height: 28px;
+
+  &__item {
+    display: inline-block;
+    box-sizing: content-box;
+    vertical-align: middle;
+    height: 6px;
+    width: 6px;
+    margin: 0 10px;
+    background-color: #b2b2b2;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      margin: 0 7px;
+      background-color: #fff;
+      border: 3px solid #283645;
+
+    };
+
+  };
+
 }
 
-
-/* header */
-.page-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, .3);
-  z-index: 100;
-}
+/* header*/
 
 .logo {
   float: left;
+  width: 50%;
+  font: 400 24px/24px @font-family;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
 
-  & a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: #fff;
-   };
+  &:hover {
+    color: #d22856;
+  };
+
 }
 
 .main-nav {
-  position: relative;
+  position: fixed;
+  width: 100%;
   padding: 21px 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 100;
 
   &__toggle {
-    position: relative;
     float: right;
     height: 24px;
     width: 50px;
-    border-top: 4px solid #fff;
+    padding: 10px 0;
+
+  & span {
+    position: relative;
+    display: block;
+    height: 4px;
+    background-color: #fff;
 
     &::before,
     &::after {
@@ -91,53 +112,107 @@ address {
     };
 
     &::before {
-      top: 6px;
+      top: -10px;
     };
 
     &::after {
-      top: 16px;
+      top: 10px;
     };
 
-    &:hover {
-      border-color: #d22856;
-    };
+   };
 
-    &:hover::before,
-    &:hover::after {
-      background-color: #d22856;
+    &:hover span {
+      background-color: transparent;
+      transition: all 0.5 s ease-in-out;
+
+      &::before,
+      &::after {
+        background-color: #d22856;
+        width: 60%;
+        transition: all 0.5s ease-in-out;
+      };
+
+      &::before {
+        transform: translateY(10px) rotate(45deg);
+      };
+
+      &::after {
+        transform: translateY(-10px) rotate(-45deg);
+      };
+
     };
 
   };
 
   &__list {
-    display: none;
+    /*display: none;*/
+  };
+
+
+  &--active {
+    background-color: #283445;
+
+    &__list {
+      position: fixed;
+      width: 100%;
+      top: 66px;
+      left: 0;
+      padding: 0;
+      list-style: none;
+    };
+
+    &__item {
+      display: block;
+      text-align: center;
+      font: 700 18px/62px @font-family;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: #283445;
+      border-top: 1px solid rgba(255,255,255, .15);
+      border-bottom: 1px solid #000;
+
+      &:hover,
+      &--active {
+        color: #d22856;
+      };
+
+    };
+
   };
 
 }
 
 /* intro */
+
 .intro {
   padding-top: 86px;
   height: 458px;
   color: #fff;
   background:
-     url("../img/intro-image__hand.png") 89% 119% no-repeat,
-     url("../img/intro-bg.jpg") 49% 70% no-repeat;
+     url("../img/intro-bg__hand.png") 50%  100% no-repeat,
+     #283445 url("../img/intro-bg.jpg") 49% 70% no-repeat;
+
+  &__title {
+    display: block;
+    margin-top: 0px;
+    font: @font-h2;
+    text-align: center;
+  };
+
 }
 
 .btn {
   display: block;
   margin-bottom: 30px;
-  text-align: center;
   background-color: transparent;
   border: 3px solid #fff;
   border-radius: 30px;
   padding: 0 34px;
-  font-size: 1.3em;
-  line-height: 49px;
-  font-weight: 700;
-  color: #fff;
+  font: 700 18px/49px @font-family;
+  text-align: center;
   text-decoration: none;
+  color: #fff;
 
   &:hover {
     background-color: #fff;
@@ -147,6 +222,7 @@ address {
 
 }
 
+/* download */
 .download {
   text-align: center;
   padding: 28px 0 28px;
@@ -193,8 +269,7 @@ address {
   &__title {
     margin-bottom: 30px;
     text-align: center;
-    font-weight: 300;
-    font-size: 24px;line-height: 28px;
+    font: @font-h2;
   };
 
   &__wrap {
@@ -206,27 +281,25 @@ address {
     &::before {
       content:"";
       position: absolute;
-      top: 0;
-      left: 0;
-      height: 30px;
+      top: -16px;
+      right: 0;
+      height: 50px;
       width: 100%;
-      background-image: linear-gradient(
-        to bottom right,
-        #fff 50%,
-        #f2f2f2 50%
-        );
+      background-color: #fff;
+      transform: rotate(-6deg);
     };
 
-  };
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      height: 320px;
+      width: 100%;
+      margin: 0 -50%;
+      background: #f2f2f2 url(../img/information-img.png) 50% 0% no-repeat;
+    };
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    left: 26%;
-    height: 320px;
-    width: 157px;
-    background: #f2f2f2 url(../img/information-img.png) 50% 0% no-repeat;
   };
 
 }
@@ -237,7 +310,7 @@ address {
 
   &__title {
     margin-bottom: 12px;
-    font: 700 18px/24px @font-family;
+    font: @font-h3;
   };
 
 }
@@ -253,13 +326,13 @@ address {
 .reviews-item {
   display: none;
 
-  &--visible {
+  &--active {
     display: block;
   };
 
   &__title {
     margin-bottom: 13px;
-    font: 700 18px/24px @font-family;
+    font: @font-h3;
   };
 
   &__text {
@@ -269,43 +342,16 @@ address {
 
 }
 
-.slider-reviews {
-
-  &__container {
-    margin-bottom: 29px;
-
-  };
-
+.slider-reviews__container {
+  margin-bottom: 29px;
 }
 
-.slider-control {
-  font-size: 0;
-  text-align: center;
-
-  &__item {
-    display: inline-block;
-    box-sizing: content-box;
-    vertical-align: middle;
-    height: 6px;
-    width: 6px;
-    margin: 0 10px;
-    background-color: #b2b2b2;
-    border-radius: 50%;
-    cursor: pointer;
-
-    &--active {
-      margin: 0 7px;
-      background-color: #fff;
-      border: 3px solid #283645;
-
-    };
-  };
-}
+/* price */
 
 .price {
-  position: relative;
   margin-bottom: 44px;
   padding: 90px 0 40px;
+  font-size: 0;
   background-color: #f2f2f2;
 
   &::before {
@@ -322,46 +368,52 @@ address {
       );
   };
 
+  &__item {
+    display: inline-block;
+    position: relative;
+    width: 33%;
+    min-width: 280px;
+    vertical-align: top;
+    overflow: hidden;
+
+    &--hit::before {
+      position: absolute;
+      content: "хит";
+      left: 0;
+      top: 0;
+      padding: 0 50px;
+      text-align: center;
+      font: 600 14px/30px @font-family;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: #d22856;
+      transform: translate(-40px, 10px) rotate(-45deg);
+      z-index: 1;
+    };
+
+  };
+
 }
 
 .price-table {
-  vertical-align: top;
-  position: relative;
-  overflow: hidden;
-  z-index: 0;
-
-  &--hit::before{
-    position: absolute;
-    content: "хит";
-    left: 0;
-    top: 0;
-    padding: 0 50px;
-    text-align: center;
-    font: 600 14px/30px @font-family;
-    color: #fff;
-    text-transform: uppercase;
-    background-color: #d22856;
-    transform: translate(-40px, 10px) rotate(-45deg);
-    z-index: 2
-  };
+  width: 100%;
+  border-left: 2px solid #e5e5e5;
 
   &__header {
     position: relative;
-    padding: 19px 89px;
+    padding: 15px 89px;
     background-color: #283645;
-    overflow: hidden;
     box-sizing: content-box;
-    border-left: 2px solid #f2f2f2;
   };
 
   &__title {
-    font: 700 18px/30px @font-family;
+    font: @font-h3;
     text-transform: uppercase;
     color: #fff;
   };
 
   &__cost {
-    font: 300 24px/30px @font-family;
+    font: 300 24px/40px @font-family;
     text-transform: uppercase;
     color: #fff;
   };
@@ -373,14 +425,14 @@ address {
     text-transform: uppercase;
     color: #283645;
     background-color: #fff;
-    border: 2px solid #e5e5e5;
+    border-bottom: 2px solid #e5e5e5;
     border-top: none;
 
     &--yes::after,
     &--no::after {
       position: absolute;
-      top: 15px;
-      right: 22px;
+      top: 19px;
+      right: 19px;
       width: 29px;
       height: 29px;
       font-size: 0;
@@ -396,23 +448,23 @@ address {
       background: #fff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEUAAADyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAADrmyZ7AAAAS3RSTlMADmQkC2gqetcnCbPDUf3hHwi1ieAltqIBXyuZ3SGdA2fjYNkKtJph2t+jY9wgBJvTuZzy/M7tlt6YAp9mB6H+4iOe2w1ifbtUkYx2fZrcAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAP1JREFUKM9tkelWwjAQhYeClUVqRZaigFIVkFXZxIqsKst9//dxaDldksyvm3OTbzJ3KKbFSVGJC50ukUzJTjqDK8oauDZF5yYH3BJpQL4gOEWgZLEoA8k7gYZ7y5WagUo1Sqs9nA+PBurVCC24aANPuiefX4CGFcI3gVZcovnMV9OjtcVROkC312faQA6AmW/vwLCviM0eAeMhKWsCTAsq4/Q3zsxUOx/cbybt4ZTbp+PmqctvvhwW87E7X1Df7Cw8OV9itRa24JwP5SBPj7Zx/IudJbbrwCmF8ZxnvifsNJTZlmf/4UQ30S0Q/bren0Dz++1oXz9YskX27PgPxIksRC8/Dz4AAAAASUVORK5CYII=") 50% 0 no-repeat;
 
     };
+
   };
 
 }
 
 .slider-price {
+  position: relative;
+  width: 283%;
+  left: 50%;
+  transform: translateX(-50%);
 
-  &__slide {
-    display: none;
-
-    &--active {
-      display: inline-block;
-    };
-
+  &--active {
+    display: inline-block;
   };
 
   &__container {
-    margin-bottom: 25px;
+    margin:0 auto 29px;
   };
 
 }
@@ -423,7 +475,7 @@ address {
 
   &__title {
     text-align: center;
-    font: 300 24px/28px @font-family;
+    font: @font-h2;
 
     &:nth-child(2) {
       margin-bottom: 35px;
@@ -438,12 +490,28 @@ address {
   margin-bottom: 20px;
 
   &__title {
-    font: 700 18px/24px @font-family;
+    font: @font-h3
   };
 
   & a {
     font: 300 24px/30px @font-family;
     color: #d22856;
     text-decoration: none;
+  };
+}
+
+.map {
+  position: relative;
+  height: 200px;
+  background: #fff url("../img/map.jpg") 46% 33% no-repeat;
+
+  &::before {
+    position: absolute;
+    content:"";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAABLEAAAB7CAMAAAC8XeKnAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAAD///////////////////////////////////////////////////////////////8AAADx3eDuAAAAEHRSTlMAMHCv34BAEO+/UCCPYM+f94tLJQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAP6SURBVHja7d1bUuJQGEZRbiKIgvMfbSddlmltERLO/aw1goRKfU+7+FfrzXb3DlC63fZpvxo975/MFlCsw/Hp5bT6YpytQ+7nAvjih7GanF6ejmYLKMLx9W29uslsAZndN1aT9dvrMfczAx06XzazxspsAVkMY7VfNlaT/eZyzv0eQON228fHymwB0Y2h1XO4tZpmS7YFhHSINFaf1KZACL+GVsFnS/8ALJVurCayLWC2uaFV+NnK/QsAVcg7VhPZFvCrEKFV8NnSPwDflTdWE9kW8OnzH62KZrage7Gq0EhkW9CrMbSqaKzMFvQqYRUabbZkW9CD42vtYzVRm0LDSgmtAs+WbAtac25yrCZqU2hEyaFV6NnSP0DFdt2M1US2BRWqLLQKP1v6B6hD32P1SbYFpWsgtArLbEGZjNVVsi0oyhBaGasbzBYUoM0qNBbZFmRzvhirJcwWJNZPFRrLWrYFKYQ9ytw3tSlEJLSKYb/RP0Bg0Y8y9022BaEIrRJxkhoeY6ySk23BIkKrfJykhhmMVQlkW3CT0KosZguuMFalkm3BF3UcZe6b2YJ3VWhVZFv0bGgXjFV9zBb9EVpVzklqumGsWqE2pXFCq/acXvQPNKj1o8x9k23REKFVH4bZ0j9QN2PVG9kWlRJa9ctJaqpirJBtUYUxtDJWfDBblEsVyo9kWxTHUWZ+Z7YohCqUe51kW+TkKDPzqU3JQGjFI5ykJpmdsSIItSmRCa0IzUlqojBWRCPbIiShFQmMs6V/4DHGiqRkWywmtCIPs8VMxorcZFvcZQitjBWFMFv8QhVKiWRb/Ge3NVaUzGzxQWhFLWRbnXOUmeqoTfsktKJiw2zpH/phrGiBbKsDQiva4iR1s4wVrZJtNUZoRfucpG6CsaInsq2KjaFV7g8I0jNb1VGF0jnZVi0cZYYPZqtsqlD4z7Nsq0THV2MF16hNCyK0gns4SZ3d2VjBLGrTTIRWsNT6Tf+QkKPM8DjZVgJCKwhpmC39QxzGCqKQbYUmtILInKQOw1hBMrKthwyhlbGCxMzWAqpQyEm2dbfzxVhBCczWDapQKM1atvUTR5mhXGrTfwitoAb7TffZ1sFYQU36rU2FVlCp3k5SGyuoXifZltAK2jHOVu5NMVbADA1mW0IraFszs2WsoBeVZ1uOMkN/qpwtVSh0rKZsa2gXjBVQ/mwJrYAvij1JbayAnxVWmwqtgFtOLwX0D44yA/fLmG0JrYAlkp+kNlbAYxJlW0IrIJSoJ6mNFRBcjGxrDK2MFRBJuNlShQJJPJxtOcoMpLVwtlShQC6nOdmWo8xAfnfUpkIroCRXT1LvjBVQpG+1qdAKKN3fk9TGihj+AHiyEX/XzkGUAAAAAElFTkSuQmCC") 50% -100% no-repeat;
   };
 }

@@ -15,23 +15,23 @@
 
   <!-- header -->
   <header class="page-header">
-
-    <!-- main-menu -->
-    <nav class="main-nav">
-
+    <nav class="main-nav main-nav--active">
       <div class="container">
 
-        <h1 class="logo"><a href="#">Pink</a></h1>
+        <!-- logo -->
+        <a href="#" class="logo">Pink</a>
 
-        <a href="#" class="main-nav__toggle"></a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a href="#">Информация</a></li>
-            <li class="main-nav__item"><a href="#navinfo">Возможности</a></li>
-            <li class="main-nav__item"><a href="#navrewievs">Отзывы</a></li>
-            <li class="main-nav__item"><a href="#navprice">Стоимость</a></li>
-          </ul>
+        <!-- main-menu -->
+        <a href="#" class="main-nav__toggle"><span></span></a>
+
+        <ul class="main-nav__list main-nav--active__list">
+          <li><a class="main-nav__item main-nav--active__item main-nav--active__item--active" href="#">Информация</a></li>
+          <li><a class="main-nav__item main-nav--active__item" href="#navinfo">Возможности</a></li>
+          <li><a class="main-nav__item main-nav--active__item" href="#navrewievs">Отзывы</a></li>
+          <li><a class="main-nav__item main-nav--active__item" href="#navprice">Стоимость</a></li>
+        </ul>
+
       </div>
-
     </nav>
   </header>
 
@@ -56,7 +56,7 @@
         <a href="#" class="download-icons__item download-icons__item--win" title="Скачать для Windows Phone">Windows Phone</a>
       </div>
 
-        <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
+      <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
 
     </div>
   </div>
@@ -94,168 +94,164 @@
 
       </div>
     </div>
-
   </section>
 
   <!-- review -->
-  <section class="reviews" id="navrewievs">
+  <section class="reviews slider-reviews" id="navrewievs">
     <div class="container">
 
       <!-- slider -->
-        <div class="slider-reviews">
-          <div class="slider-reviews__container">
+      <div class="slider-reviews__container">
 
-            <!-- slide -->
-            <article class="reviews-item reviews-item--visible">
-              <h3 class="reviews-item__title">Николай Петров</h3>
-              <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </article>
+        <!-- item -->
+        <article class="reviews-item reviews-item--active">
+          <h3 class="reviews-item__title">Николай Петров</h3>
+          <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+        </article>
 
-            <!-- slide -->
-            <article class="reviews-item">
-              <h3 class="reviews-item__title">Николай Петров</h3>
-              <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </article>
+        <!-- item -->
+        <article class="reviews-item">
+          <h3 class="reviews-item__title">Николай Петров</h3>
+          <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+        </article>
 
-            <!-- slide -->
-            <article class="reviews-item">
-              <h3 class="reviews-item__title">Николай Петров</h3>
-              <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-            </article>
+        <!-- item -->
+        <article class="reviews-item">
+          <h3 class="reviews-item__title">Николай Петров</h3>
+          <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+        </article>
 
-          </div>
+      </div>
 
-          <!-- controls -->
-          <div class="slider-control">
-            <a href"#" class="slider-control__item slider-control__item--active"></a>
-            <a href"#" class="slider-control__item"></a>
-            <a href"#" class="slider-control__item"></a>
-          </div>
-
-        </div>
+      <!-- controls -->
+      <div class="slider-control">
+        <a href"#" class="slider-control__item slider-control__item--active"></a>
+        <a href"#" class="slider-control__item"></a>
+        <a href"#" class="slider-control__item"></a>
+      </div>
 
     </div>
   </section>
 
   <!-- price -->
-  <div class="price" id="navprice">
+  <div class="price slider-price" id="navprice">
     <div class="container">
 
       <!-- slider -->
-      <div class="slider-price">
-        <div class="slider-price__container">
+      <div class="slider-price__container">
 
-          <!-- slide -->
-          <div class="slider-price__slide">
-            <table class="price-table">
-              <tbody>
+        <!-- item -->
+        <div class="price__item">
+          <table class="price-table">
+            <tbody>
 
-                <tr>
-                  <th class="price-table__header">
-                    <h3 class="price-table__title">База</h3>
-                    <span class="price-table__cost">1,99 USD</span>
-                  </th>
-                </tr>
+              <tr>
+                <th class="price-table__header">
+                  <h3 class="price-table__title">База</h3>
+                  <span class="price-table__cost">1,99 USD</span>
+                </th>
+              </tr>
 
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Розовый фильтр
-                  </td>
-                </tr>
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Розовый фильтр
+                </td>
+              </tr>
 
-                <tr>
-                  <td class="price-table__cell price-table__cell--no">
-                    Смайлики
-                  </td>
-                </tr>
+              <tr>
+                <td class="price-table__cell price-table__cell--no">
+                  Смайлики
+                </td>
+              </tr>
 
-                <tr>
-                  <td class="price-table__cell price-table__cell--no">
-                    Комментарии
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+              <tr>
+                <td class="price-table__cell price-table__cell--no">
+                  Комментарии
+                </td>
+              </tr>
 
-          <!-- slide -->
-          <div class="slider-price__slide slider-price__slide--active">
-            <table class="price-table price-table--hit">
-              <tbody>
-
-                <tr>
-                  <th class="price-table__header">
-                    <h3 class="price-table__title">Стандарт</h3>
-                    <span class="price-table__cost">3,99 USD</span>
-                  </th>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Розовый фильтр
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Смайлики
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--no">
-                    Комментарии
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- slide -->
-          <div class="slider-price__slide">
-            <table class="price-table">
-              <tbody>
-
-                <tr>
-                  <th class="price-table__header">
-                    <h3 class="price-table__title">Анлим</h3>
-                    <span class="price-table__cost">8,99 USD</span>
-                  </th>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Розовый фильтр
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Смайлики
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="price-table__cell price-table__cell--yes">
-                    Комментарии
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
 
-        <!-- controls -->
-        <div class="slider-control">
-          <a href"#" class="slider-control__item"></a>
-          <a href"#" class="slider-control__item slider-control__item--active"></a>
-          <a href"#" class="slider-control__item"></a>
+        <!-- item -->
+        <div class="price__item price__item--hit">
+          <table class="price-table">
+            <tbody>
+
+              <tr>
+                <th class="price-table__header">
+                  <h3 class="price-table__title">Стандарт</h3>
+                  <span class="price-table__cost">3,99 USD</span>
+                </th>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Розовый фильтр
+                </td>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Смайлики
+                </td>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--no">
+                  Комментарии
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
 
+        <!-- item -->
+        <div class="price__item">
+          <table class="price-table">
+            <tbody>
+
+              <tr>
+                <th class="price-table__header">
+                  <h3 class="price-table__title">Анлим</h3>
+                  <span class="price-table__cost">8,99 USD</span>
+                </th>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Розовый фильтр
+                </td>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Смайлики
+                </td>
+              </tr>
+
+              <tr>
+                <td class="price-table__cell price-table__cell--yes">
+                  Комментарии
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      <!-- controls -->
+      <div class="slider-control">
+        <a href"#" class="slider-control__item"></a>
+        <a href"#" class="slider-control__item slider-control__item--active"></a>
+        <a href"#" class="slider-control__item"></a>
+      </div>
+
     </div>
   </div>
-
   <!-- footer -->
   <footer class="page-footer">
 
