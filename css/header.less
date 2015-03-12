@@ -1,0 +1,91 @@
+@import "variable.less";
+.logo {
+  float: left;
+  width: 50%;
+  font: 400 24px/24px @font-family;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:hover {
+    color: @color-hover;
+  };
+
+}
+
+.main-nav {
+  position: fixed;
+  width: 100%;
+  padding: 21px 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 100;
+
+  &__toggle {
+    float: right;
+    height: 24px;
+    width: 50px;
+    background-color: @color-bg__header;
+    background-image: linear-gradient(
+      #fff 4px,
+      transparent 4px,
+      transparent 10px,
+      #fff 10px,
+      #fff 14px,
+      transparent 14px,
+      transparent 20px,
+      #fff 20px
+    );
+
+    &:hover {
+      background-image: linear-gradient(
+        @color-hover 4px,
+        transparent 4px,
+        transparent 10px,
+        @color-hover 10px,
+        @color-hover 14px,
+        transparent 14px,
+        transparent 20px,
+        @color-hover 20px
+      );
+    };
+
+  };
+
+  &__list {
+    /*display: none;*/
+  };
+
+
+  &--active {
+    background-color: @color-bg__header;
+
+    &__list {
+      position: fixed;
+      width: 100%;
+      top: 66px;
+      left: 0;
+      padding: 0;
+      list-style: none;
+    };
+
+    &__item {
+      display: block;
+      text-align: center;
+      font: 700 18px/62px @font-family;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      background-color: @color-bg__header;
+      border-top: 1px solid rgba(255,255,255, .15);
+      border-bottom: 1px solid #000;
+
+      &:hover,
+      &--active {
+        color: @color-hover;
+      };
+
+    };
+
+  };
+
+}

@@ -1,0 +1,55 @@
+@import "variable.less";
+
+.information {
+  position: relative;
+  padding-top: 43px;
+  overflow: hidden;
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font: @font-h2;
+  };
+
+  &__wrap {
+    position: relative;
+    background-color:@color-bg__section;
+    padding: 85px 0 288px;
+    overflow: hidden;
+
+    &::before {
+      content:"";
+      position: absolute;
+      top: -50px;
+      right: 0;
+      height: 90px;
+      width: 110%;
+      background-color: #fff;
+      transform: rotate(-6deg);
+    };
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      height: 320px;
+      width: 100%;
+      margin: 0 -50%;
+      background:@color-bg__section url(../img/information-img.png) 50% 0% no-repeat;
+    };
+
+  };
+
+}
+
+.information-item {
+  margin-bottom: 30px;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 12px;
+    font: @font-h3;
+  };
+
+}
