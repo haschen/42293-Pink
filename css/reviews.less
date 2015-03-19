@@ -26,6 +26,50 @@
 
 }
 
+.review-persone {
+  display: none;
+
+  &__name {
+    font: 700 20px/30px @font-family;
+  };
+
+  &__info {
+    color: #283645;
+  };
+}
+
 .slider-reviews__container {
   margin-bottom: 29px;
+}
+
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .reviews {
+    position: relative;
+    margin-bottom: 38px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+  .reviews-item {
+
+    &__text {
+      margin-bottom: 35px;
+      font: 400 18px/30px @font-family;
+      color: #283645;
+    };
+
+    &__title {
+      display: none;
+    };
+
+  }
+  .review-persone {
+    display: block;
+
+    &__name {
+      padding-bottom: 5px;
+    };
+  }
+
 }

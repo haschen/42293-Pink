@@ -1,0 +1,51 @@
+@import "variable.less";
+
+.effect {
+  display: none;
+}
+
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .effect {
+    display: block;
+    color: #283645;
+
+    &__wrap {
+      position: relative;
+      padding: 100px 0 100px 51%;
+      background: transparent url("../img/timer.svg") 5% 50% no-repeat;
+
+      &::before {
+        content: "24";
+        position: absolute;
+        top: 30%;
+        left: 7%;
+        height: 210px;
+        width: 210px;
+        vertical-align: bottom;
+        text-align: center;
+        font: 700 105px/180px @font-family;
+        color: #d22856;
+        border: 10px solid #d22856;
+        border-radius: 50%;
+      };
+
+    };
+
+    &__title {
+      margin-bottom: 10px;
+      font: 700 30px/36px @font-family;
+      color: #000;
+    };
+
+    & p {
+      margin-bottom: 10px;
+    };
+
+    & a {
+      color: #d22856;
+    };
+
+  }
+
+}

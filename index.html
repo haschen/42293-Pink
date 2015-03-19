@@ -16,50 +16,45 @@
   <!-- header -->
   <header class="page-header">
     <nav class="main-nav main-nav--active">
-      <div class="container">
+      <!-- logo -->
+      <a href="#" class="logo">Pink</a>
 
-        <!-- logo -->
-        <a href="#" class="logo">Pink</a>
+      <!-- main-menu -->
+      <a href="#" class="main-nav__toggle"><span></span></a>
+      <ul class="main-nav__list main-nav--active__list">
+        <li><a class="main-nav__item main-nav--active__item main-nav--active__item--active" href="#">Информация</a></li>
+        <li><a class="main-nav__item main-nav--active__item" href="#navinfo">Возможности</a></li>
+        <li><a class="main-nav__item main-nav--active__item" href="#navrewievs">Отзывы</a></li>
+        <li><a class="main-nav__item main-nav--active__item" href="#navprice">Стоимость</a></li>
+      </ul>
 
-        <!-- main-menu -->
-        <a href="#" class="main-nav__toggle"><span></span></a>
-
-        <ul class="main-nav__list main-nav--active__list">
-          <li><a class="main-nav__item main-nav--active__item main-nav--active__item--active" href="#">Информация</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navinfo">Возможности</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navrewievs">Отзывы</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navprice">Стоимость</a></li>
-        </ul>
-
-      </div>
     </nav>
-  </header>
 
-  <!-- intro -->
-  <div class="intro">
     <div class="container">
+      <div class="page-header__wrap">
 
-      <h2 class="intro__title">Взгляните на жизнь иначе!</h2>
+        <!-- intro -->
+        <div class="intro">
+            <h2 class="intro__title">Взгляните на&nbsp;жизнь иначе!</h2>
+        </div>
 
-    </div>
-  </div>
+        <!-- donload -->
+        <div class="download">
+          <a href="#" class="btn" title="Скачать для IPhone">Скачать приложение</a>
 
-  <!-- donload -->
-  <div class="download">
-    <div class="container">
+          <div class="download-icons">
+            <a href="#" class="download-icons__item download-icons__item--iphone" title="Скачать для IPhone">Iphone</a>
+            <a href="#" class="download-icons__item download-icons__item--android" title="Скачать для Android">Android</a>
+            <a href="#" class="download-icons__item download-icons__item--win" title="Скачать для Windows Phone">Windows Phone</a>
+          </div>
 
-      <a href="#" class="btn" title="Скачать для IPhone">Скачать приложение</a>
+          <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
 
-      <div class="download-icons">
-        <a href="#" class="download-icons__item download-icons__item--iphone" title="Скачать для IPhone">Iphone</a>
-        <a href="#" class="download-icons__item download-icons__item--android" title="Скачать для Android">Android</a>
-        <a href="#" class="download-icons__item download-icons__item--win" title="Скачать для Windows Phone">Windows Phone</a>
+        </div>
+
       </div>
-
-      <p>Доступно для iPhone, iPad, Android, Windows&nbsp;phone, Mac&nbsp;OS, Windows&nbsp;8</p>
-
     </div>
-  </div>
+  </header>
 
   <!-- information -->
   <section class="information" id="navinfo">
@@ -67,12 +62,12 @@
 
       <!-- title -->
       <h2 class="information__title">Устали от серости мегаполиса?</h2>
-      <h2 class="information__title">Нам есть, что вам предложить!</h2>
+      <h2 class="information__title">Нам есть, что вам<br> предложить!</h2>
 
     </div>
 
-    <div class="information__wrap">
-      <div class="container">
+    <div class="container">
+      <div class="information__wrap">
 
         <!-- item -->
         <div class="information-item">
@@ -96,6 +91,18 @@
     </div>
   </section>
 
+  <!-- effect -->
+  <div class="effect">
+    <div class="container">
+      <div class="effect__wrap">
+        <h2 class="effect__title">Эффект<br> на 24&nbsp;часа</h2>
+        <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+        <a class"effect__link" href="#">Узнать больше об исследовании</a>
+      </div>
+    </div>
+
+  </div>
+
   <!-- review -->
   <section class="reviews slider-reviews" id="navrewievs">
     <div class="container">
@@ -107,18 +114,30 @@
         <article class="reviews-item reviews-item--active">
           <h3 class="reviews-item__title">Николай Петров</h3>
           <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+          <div class="review-persone">
+            <h3 class="review-persone__name">Николай Петров</h3>
+            <span class="review-persone__info">25 лет, водитель трамвая</span>
+          </div>
         </article>
 
         <!-- item -->
         <article class="reviews-item">
           <h3 class="reviews-item__title">Николай Петров</h3>
           <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+          <div class="review-persone">
+            <h3 class="review-persone__name">Николай Петров</h3>
+            <span class="review-persone__info">25 лет, водитель трамвая</span>
+          </div>
         </article>
 
         <!-- item -->
         <article class="reviews-item">
           <h3 class="reviews-item__title">Николай Петров</h3>
           <blockquote class="reviews-item__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+          <div class="review-persone">
+            <h3 class="review-persone__name">Николай Петров</h3>
+            <span class="review-persone__info">25 лет, водитель трамвая</span>
+          </div>
         </article>
 
       </div>

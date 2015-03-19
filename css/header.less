@@ -1,7 +1,15 @@
 @import "variable.less";
+
+.page-header {
+  background: #283445 url("../img/header-bg--320.jpg") 50% 0 no-repeat;
+
+  &__wrap {
+    background: url("../img/header-bg__hand--320.png") 0  39.3% no-repeat;
+  };
+}
+
 .logo {
   float: left;
-  width: 50%;
   font: 400 24px/24px @font-family;
   text-decoration: none;
   text-transform: uppercase;
@@ -16,15 +24,15 @@
 .main-nav {
   position: fixed;
   width: 100%;
-  padding: 21px 0;
+  padding: 21px 20px;
   background-color: rgba(0, 0, 0, .3);
   z-index: 100;
 
   &__toggle {
     float: right;
+    right: 20px;
     height: 24px;
     width: 50px;
-    background-color: @color-bg__header;
     background-image: linear-gradient(
       #fff 4px,
       transparent 4px,
@@ -52,12 +60,10 @@
   };
 
   &__list {
-    /*display: none;*/
+    display: none;
   };
 
-
   &--active {
-    background-color: @color-bg__header;
 
     &__list {
       position: fixed;
@@ -89,3 +95,23 @@
   };
 
 }
+
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .main-nav {
+    padding: 43px 40px;
+  };
+
+  .page-header {
+    background: #283445 url("../img/header-bg--700.jpg") 50% 0 no-repeat;
+
+    &__wrap {
+      /*width: 680px;*/
+      padding: 0 50% 0 20px;
+      background: url("../img/header-bg__hand--700.png") 30% 100% no-repeat;
+    };
+
+  }
+
+}
+

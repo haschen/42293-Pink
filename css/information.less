@@ -4,6 +4,22 @@
   position: relative;
   padding-top: 43px;
   overflow: hidden;
+  background-image: linear-gradient(
+    to bottom,
+    #fff 20%,
+    @color-bg__section 20%
+    );
+
+  &::before {
+    content:"";
+    position: absolute;
+    top: 115px;
+    left: -5%;
+    height: 115px;
+    width: 150%;
+    background-color: #fff;
+    transform: rotate(-5deg);
+  };
 
   &__title {
     margin-bottom: 30px;
@@ -13,32 +29,9 @@
 
   &__wrap {
     position: relative;
-    background-color:@color-bg__section;
+    background: transparent url(../img/information-bg--320.png) 50% 109% no-repeat;
     padding: 85px 0 288px;
     overflow: hidden;
-
-    &::before {
-      content:"";
-      position: absolute;
-      top: -50px;
-      right: 0;
-      height: 90px;
-      width: 110%;
-      background-color: #fff;
-      transform: rotate(-6deg);
-    };
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -40px;
-      left: 50%;
-      height: 320px;
-      width: 100%;
-      margin: 0 -50%;
-      background:@color-bg__section url(../img/information-img.png) 50% 0% no-repeat;
-    };
-
   };
 
 }
@@ -51,5 +44,39 @@
     margin-bottom: 12px;
     font: @font-h3;
   };
+
+}
+
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .information {
+    padding-top: 50px;
+    background-image: linear-gradient(
+    to bottom,
+    #fff 30%,
+    @color-bg__section 30%
+    );
+
+    &::before {
+      top: 140px;
+      transform: rotate(-4deg);
+    };
+
+    &__title {
+      margin-bottom: 0;
+      font: @font-h2__700;
+    };
+
+    &__wrap {
+      padding: 120px 0 5px 51%;
+      background: transparent url("../img/information-bg--700.png") 5%  105% no-repeat;
+    }
+
+  }
+
+  .information-item {
+    margin-bottom: 35px;
+    text-align: left;
+  }
 
 }

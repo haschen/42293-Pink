@@ -1,14 +1,35 @@
 @import "variable.less";
+
 .download {
+  width: 280px;
   text-align: center;
-  padding: 28px 0 28px;
+  padding-bottom: 28px;
   font-weight: 300;
   color: #fff;
-  background-color: @color-bg__header;
+}
+
+.btn {
+  display: block;
+  margin-bottom: 32px;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  padding: 0 34px;
+  font: 700 18px/49px @font-family;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    border-color: @color-hover;
+    color: @color-hover;
+  };
+
 }
 
 .download-icons {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   padding: 0 19px;
   font-size: 0;
 
@@ -32,6 +53,24 @@
 
   &__item--android {
     background-image: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAvCAMAAACi0KjaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEUAAACkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjmkxjkAAACTXjzEAAAAEHRSTlMAjyBAgFCv7xCf32C/cM8wtVBr1AAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADySURBVDjL7ZXZEoMgDEXTIoSAS/7/awsBHFsCnWlfvS8GOcZIFgGaHs14mqRnd/uiRXatQxahs/LcoqCeEhj4opBg8goKMRJ/iGLUSPDInVB1Ci5vLetJiek0csv7EXxDl2Juo9c7HxtaTSWEyANFNVJVfbQ4QrFDeSj4Q2aonwIwRPYbaomSc1tTMkMlkRb2eiAzVA4yQFvO0Hq90RuVygpzVIbeDiZXmJ2juabR5Akqk3WGNqaKRiT1M2vVyVUbm0a+kLfS0tJPvB/6KCh+a9+b4hNuVJdreRTJwg3QI1fO+fPJOcBBBqQqLoPXvNUIwAtHxUYW5CJ9BgAAAABJRU5ErkJggg==")
+  }
+
+}
+
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .download {
+    width: 300px;
+    padding-bottom: 110px;
+    font: 300 18px/24px @font-family;
+  }
+
+  .btn {
+    margin-bottom: 48px;
+  }
+
+  .download-icons {
+    margin-bottom: 36px;
   }
 
 }

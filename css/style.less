@@ -3,6 +3,7 @@
 @import "intro.less";
 @import "download.less";
 @import "information.less";
+@import "effect.less";
 @import "reviews.less";
 @import "price.less";
 @import "footer.less";
@@ -21,6 +22,7 @@ h3,
 p,
 ul,
 span,
+blockquote,
 address {
   margin: 0;
 }
@@ -36,16 +38,9 @@ address {
 
 .container {
   position: relative;
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding: 0 20px;
-
-  &::after {
-    content:"";
-    display: table;
-    clear: both;
-  };
-
 }
 
 .slider-control {
@@ -68,14 +63,45 @@ address {
       margin: 0 7px;
       background-color: #fff;
       border: 3px solid @color-bg__header;
-
     };
 
   };
 
 }
 
-/* header*/
+@media (min-width: 680px) and (max-width: 980px) {
+
+  .page-header__wrap {
+
+  }
+
+  .container {
+    width: 680px;
+  }
+
+}
 
 
-/* contacts */
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 980px) {
+
+  .container {
+    width: 660px;
+
+    &--top {
+      background: url("../img/header-bg__hand--1000.png") 30%  100% no-repeat;
+    };
+
+  }
+
+}
+
