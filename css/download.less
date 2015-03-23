@@ -1,7 +1,8 @@
 @import "variable.less";
 
 .download {
-  width: 280px;
+  min-width: 300px;
+ /* margin:  0 auto;*/
   text-align: center;
   padding-bottom: 28px;
   font-weight: 300;
@@ -9,16 +10,17 @@
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   margin-bottom: 32px;
-  background-color: transparent;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  padding: 0 34px;
+  vertical-align: top;
+  padding: 0 32px;
   font: 700 18px/49px @font-family;
   text-align: center;
   text-decoration: none;
   color: #fff;
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 30px;
 
   &:hover {
     background-color: #fff;
@@ -36,7 +38,7 @@
   &__item {
     display: inline-block;
     vertical-align: bottom;
-    margin: 0 17px ;
+    margin: 0 16px ;
     height: 55px;
     width: 46px;
     background-repeat: no-repeat;
@@ -57,10 +59,10 @@
 
 }
 
-@media (min-width: 680px) and (max-width: 980px) {
+@media (min-width: 680px) and (max-width: 979px) {
 
   .download {
-    width: 300px;
+    width: 50%;
     padding-bottom: 110px;
     font: 300 18px/24px @font-family;
   }
@@ -71,6 +73,25 @@
 
   .download-icons {
     margin-bottom: 36px;
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  .download {
+    width: 320px;
+    padding-bottom: 123px;
+    font: 300 18px/24px @font-family;
+  }
+
+  .btn {
+    margin-bottom: 65px;
+    font: 700 21px/49px @font-family;
+  }
+
+  .download-icons {
+    margin-bottom: 57px;
   }
 
 }

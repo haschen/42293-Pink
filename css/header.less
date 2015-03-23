@@ -1,114 +1,170 @@
 @import "variable.less";
 
-.page-header {
-  background: #283445 url("../img/header-bg--320.jpg") 50% 0 no-repeat;
+  .page-header {
+    position: fixed;
+    width: 100%;
+    padding: 21px 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 100;
+  }
 
-  &__wrap {
-    background: url("../img/header-bg__hand--320.png") 0  39.3% no-repeat;
-  };
-}
-
-.logo {
-  float: left;
-  font: 400 24px/24px @font-family;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #fff;
-
-  &:hover {
-    color: @color-hover;
-  };
-
-}
-
-.main-nav {
-  position: fixed;
-  width: 100%;
-  padding: 21px 20px;
-  background-color: rgba(0, 0, 0, .3);
-  z-index: 100;
-
-  &__toggle {
-    float: right;
-    right: 20px;
+  .logo {
+    float: left;
     height: 24px;
-    width: 50px;
-    background-image: linear-gradient(
-      #fff 4px,
-      transparent 4px,
-      transparent 10px,
-      #fff 10px,
-      #fff 14px,
-      transparent 14px,
-      transparent 20px,
-      #fff 20px
-    );
+    width: 75px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent url("../img/logo--320.png") 0 0 no-repeat;
+  }
 
-    &:hover {
+  .main-nav {
+    padding: 0;
+
+    &__toggle {
+      float: right;
+      right: 20px;
+      height: 24px;
+      width: 50px;
       background-image: linear-gradient(
-        @color-hover 4px,
+        #fff 4px,
         transparent 4px,
         transparent 10px,
-        @color-hover 10px,
-        @color-hover 14px,
+        #fff 10px,
+        #fff 14px,
         transparent 14px,
         transparent 20px,
-        @color-hover 20px
+        #fff 20px
       );
-    };
 
-  };
-
-  &__list {
-    display: none;
-  };
-
-  &--active {
-
-    &__list {
-      position: fixed;
-      width: 100%;
-      top: 66px;
-      left: 0;
-      padding: 0;
-      list-style: none;
-    };
-
-    &__item {
-      display: block;
-      text-align: center;
-      font: 700 18px/62px @font-family;
-      text-decoration: none;
-      text-transform: uppercase;
-      color: #fff;
-      background-color: @color-bg__header;
-      border-top: 1px solid rgba(255,255,255, .15);
-      border-bottom: 1px solid #000;
-
-      &:hover,
-      &--active {
-        color: @color-hover;
+      &:hover {
+        background-image: linear-gradient(
+          @color-hover 4px,
+          transparent 4px,
+          transparent 10px,
+          @color-hover 10px,
+          @color-hover 14px,
+          transparent 14px,
+          transparent 20px,
+          @color-hover 20px
+        );
       };
 
     };
 
+    &__list {
+      display: none;
+    };
+
+    &--active {
+
+      &__list {
+        /*position: fixed;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        padding: 0;
+        list-style: none;*/
+      };
+
+      &__item {
+        display: block;
+        font: 700 18px/62px @font-family;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: @color-bg__header;
+        border-top: 1px solid rgba(255,255,255, .15);
+        border-bottom: 1px solid #000;
+
+        /*&:hover,
+        &--active {
+          color: @color-hover;
+        };*/
+
+      };
+
+    };
+
+  }
+
+@media (min-width: 680px) and (max-width: 979px) {
+
+  .page-header {
+    padding: 23px 0;
+  }
+
+  .logo {
+    float: left;
+    height: 40px;
+    width: 145px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent url("../img/logo--700.png") 0 0 no-repeat;
+  }
+
+  .main-nav {
+    padding: 20px 0;
   };
 
 }
 
-@media (min-width: 680px) and (max-width: 980px) {
-
-  .main-nav {
-    padding: 43px 40px;
-  };
+@media (min-width: 980px) {
 
   .page-header {
-    background: #283445 url("../img/header-bg--700.jpg") 50% 0 no-repeat;
+    padding: 28px 0;
+  }
 
-    &__wrap {
-      /*width: 680px;*/
-      padding: 0 50% 0 20px;
-      background: url("../img/header-bg__hand--700.png") 30% 100% no-repeat;
+  .logo {
+    float: left;
+    height: 40px;
+    width: 145px;
+    margin-right: 198px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    background: transparent url("../img/logo--1000.png") 0 0 no-repeat;
+  }
+
+  .main-nav {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px 0;
+
+    &__toggle {
+      display: none;
+    };
+
+    &__list {
+        display: block;
+        padding: 0;
+        list-style: none;
+
+        & li {
+          float: left;
+          margin-right: 66px;
+
+          &:last-child {
+            margin-right: 0;
+          };
+        };
+    };
+
+      &__item {
+        font: 400 18px/32px @font-family;
+        text-transform: none;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+
+        &:hover,
+        &--active {
+          border-bottom-color: #fff;
+        };
+
     };
 
   }

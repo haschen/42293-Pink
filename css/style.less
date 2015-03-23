@@ -38,9 +38,33 @@ address {
 
 .container {
   position: relative;
-  width: 320px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 6%;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  };
+
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.content-top {
+  background: #283445 url("../img/header-bg--320.jpg") 50% 0 no-repeat;
+
+  &__wrap {
+    margin: 0 auto;
+    max-width: 320px;
+    background:transparent url("../img/header-bg__hand--320.png") 0  39.3% no-repeat;
+  };
+
 }
 
 .slider-control {
@@ -69,39 +93,36 @@ address {
 
 }
 
-@media (min-width: 680px) and (max-width: 980px) {
+@media (min-width: 680px) and (max-width: 979px) {
 
-  .page-header__wrap {
+  .content-top {
+    background: #283445 url("../img/header-bg--700.jpg") 50% 0 no-repeat;
 
-  }
-
-  .container {
-    width: 680px;
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 980px) {
-
-  .container {
-    width: 660px;
-
-    &--top {
-      background: url("../img/header-bg__hand--1000.png") 30%  100% no-repeat;
+    &__wrap {
+      max-width: 100%;
+      background: url("../img/header-bg__hand--700.png") 94% 100% no-repeat;
     };
 
   }
 
 }
 
+@media (min-width: 980px) {
+
+  .container {
+    width: 980px;
+    padding: 0 20px;
+  }
+
+  .content-top {
+    background: #283445 url("../img/header-bg--1000.jpg") 35% 0 no-repeat;
+    background-size: cover;
+
+    &__wrap {
+      max-width: 960px;
+      background: url("../img/header-bg__hand--1000.png") -40% 100% no-repeat;
+    };
+
+  }
+
+}

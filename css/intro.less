@@ -3,7 +3,6 @@
 .intro {
   margin-bottom: 344px;
   padding-top: 86px;
-  width: 280px;
   color: #fff;
 
   &__title {
@@ -15,17 +14,37 @@
 
 }
 
-@media (min-width: 680px) and (max-width: 980px) {
+@media (min-width: 680px) and (max-width: 979px) {
 
   .intro {
-    width: 300px;
+    width: 50%;
+    min-width: 300px;
     margin-bottom: 30px;
-    padding: 203px 0 0;
+    padding-top: 203px;
 
     &__title {
       display: block;
-      margin-top: 0px;
+      max-width: 300px;
+      margin: 0px auto;
       font: @font-h2__700;
+      text-align: center;
+    };
+
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  .intro {
+    width: 320px;
+    margin-bottom: 55px;
+    padding-top: 220px;
+
+    &__title {
+      display: block;
+      margin: 0px auto;
+      font: @font-h2__1000;
       text-align: center;
     };
 

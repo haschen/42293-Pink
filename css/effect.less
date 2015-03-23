@@ -1,35 +1,36 @@
 @import "variable.less";
 
 .effect {
-  display: none;
-}
-
-@media (min-width: 680px) and (max-width: 980px) {
-
-  .effect {
-    display: block;
+    display: none;
     color: #283645;
 
     &__wrap {
       position: relative;
-      padding: 100px 0 100px 51%;
-      background: transparent url("../img/timer.svg") 5% 50% no-repeat;
+      padding: 95px 0 100px;
+      background: transparent url("../img/timer.svg") 0 50% no-repeat;
 
       &::before {
         content: "24";
         position: absolute;
-        top: 30%;
-        left: 7%;
+        top: 29%;
+        left: 25px;
         height: 210px;
         width: 210px;
+        margin: 0px 0px;
         vertical-align: bottom;
         text-align: center;
         font: 700 105px/180px @font-family;
         color: #d22856;
-        border: 10px solid #d22856;
+        border: 11px solid #d22856;
         border-radius: 50%;
       };
 
+    };
+
+    &__item {
+      float: right;
+      width: 51%;
+      padding-left: 1%;
     };
 
     &__title {
@@ -45,6 +46,74 @@
     & a {
       color: #d22856;
     };
+
+  }
+
+
+
+@media (min-width: 680px) and (max-width: 979px) {
+
+  .effect {
+    display: block;
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  .effect {
+    display: none;
+    color: #283645;
+
+    &__wrap {
+      position: relative;
+      padding: 95px 0 100px;
+      background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTguMDAxIiBoZWlnaHQ9IjM0NS4wOTciIHZpZXdCb3g9IjAgMCAyOTguMDAxIDM0NS4wOTciIGZpbGw9IiNkZWRlZGUiPjxwYXRoIGQ9Ik0yOTMuMDU3IDE1Ny45OGMtNS40NDItMjAuNjU3LTE1LjE5OC0zOS41NjMtMjguMjczLTU1LjY4OGw4LjU2Ny04LjU2M2M2LjA3NS02LjA3OCA2LjA3NS0xNS45MyAwLTIyLTMuMzMzLTMuMzQtNy43OC00LjY1Ni0xMi4xMjgtNC4zMzMtMy41OTYuMjU0LTcuMTQ2IDEuNTk2LTkuODY2IDQuMzMzbC04LjU2MyA4LjU2Yy05LjA4My03LjM1NC0xOS4wOC0xMy41NTItMjkuNzM0LTE4LjYyNy05LjYxOC00LjU1OC0xOS43NTItOC4xOTUtMzAuMzQtMTAuNjdsLS4zMS0uMDM3Yy00LjU4Ny0xLjA2NS05LjIwNC0xLjk4NS0xMy45NjItMi42MTN2LTkuNDRoNi44OGMxMC43MzYgMCAxOS40NDUtOC43MDggMTkuNDQ1LTE5LjQ3MyAwLTEwLjcyNC04LjcxLTE5LjQzLTE5LjQ0Ni0xOS40M2gtNTMuODMyYy0xLjcxMyAwLTMuMzU2LjI4OC00Ljk2LjY5N2wtLjAyLjAzYy04LjMyNiAyLjItMTQuNDYzIDkuNzE0LTE0LjQ2MyAxOC43MDMgMCAxMC43NjUgOC43MSAxOS40NzQgMTkuNDQyIDE5LjQ3NGg4LjA2MnY5LjQ0Qzc5LjQ3IDU0Ljg3NSAzNy4zMzYgODYuMzM4IDE1LjcgMTI5Ljc5Yy00LjMyIDguNjYtNy44OTMgMTcuNzQ2LTEwLjQ1NCAyNy4yNEMxLjg0NiAxNjkuNDg0IDAgMTgyLjU1NCAwIDE5Ni4wOWMwIDY0LjQxNiA0MC45NTIgMTE5LjE1OCA5OC4yMjcgMTM5Ljk0NSAxNS44NyA1LjczNCAzMi45MjIgOS4wNjIgNTAuNzcyIDkuMDYyIDcuNDM0IDAgMTQuNzM1LS41NiAyMS44NTItMS42MzMuNzYyLS4wOTYgMS40ODQtLjMyIDIuMjUtLjQ1IDIwLjk2Ny0zLjQzMyA0MC41My0xMS4xNyA1Ny41OTctMjIuMzkzIDIzLjU3LTE1LjQ5NSA0Mi4zNzctMzcuNDYzIDU0LjA4LTYzLjM4OCA4LjQyNC0xOC43IDEzLjIyMi0zOS4zMjYgMTMuMjIyLTYxLjE0NCAwLTEzLjE2OC0xLjcyNi0yNS45MzUtNC45NDUtMzguMTA4em0tNjYuMjEgMTE1Ljk2M2MtMTQuMTkzIDE0LjE5LTMxLjU4IDIzLjg3Ny01MC41NCAyOC43MzUtNi41IDEuNjI2LTEzLjI1NyAyLjUxLTIwLjA2NiAyLjk2Ni0uOTcuMDYtMS44OC4yMy0yLjg0NC4yNC0xLjQ3Ni4wNzMtMi45MTYuMy00LjM5Ni4zLTQuMDQ0IDAtOC4wNjItLjI2LTEyLjAzNC0uNjktMjQuODYtMi42OTctNDcuODg1LTEzLjYwOC02NS44MjMtMzEuNTUtMjAuNzk0LTIwLjc5NC0zMi4yNTgtNDguNDU1LTMyLjI1OC03Ny44NTUgMC0yLjMzLjE5OC00LjYuMzM0LTYuODk3IDEuNjU4LTI2LjgxNSAxMi43NjUtNTEuODIgMzEuOTIzLTcwLjk3IDIuMzgzLTIuMzcgNC44NzUtNC41OTQgNy40Mi02LjczNWwuMDE3LS4wMTNjMTkuNzUtMTYuNDggNDQuMzgtMjUuNSA3MC40Mi0yNS41IDQuNzYgMCA5LjQ0LjMyNyAxNC4wNTIuOTMgMTQuNDYyIDEuODcgMjguMjQ3IDYuNTcgNDAuNzQzIDEzLjc1OC4xMzYuMDgzLjI4Ni4xODQuNDEuMjggOC4xNSA0Ljc0NCAxNS43OTcgMTAuNDQ2IDIyLjY0NSAxNy4yOCAxLjYwOCAxLjYyMiAzLjA2NyAzLjMzNSA0LjU1IDUuMDMybC4xNjYuMTg0YzMuMDI1IDMuNDQ2IDUuNzMgNy4xNCA4LjI5MiAxMC44ODcgMS42MyAyLjQ0MiAzLjI2NCA0Ljg5NCA0LjY5NCA3LjQzIDguODQ1IDE1LjQ1IDEzLjg1IDMyLjg1MyAxNC4zODYgNTEuMDcuMDM4IDEuMDkuMTUyIDIuMTQ4LjE1MiAzLjI2Mi0uMDAyIDI5LjQtMTEuNDQ1IDU3LjA2LTMyLjI0MiA3Ny44NTN6Ii8+PC9zdmc+') 0 50% no-repeat;;
+
+      &::before {
+        content: "24";
+        position: absolute;
+        top: 23%;
+        left: 25px;
+        height: 247px;
+        width: 247px;
+        padding: 20px 0;
+        vertical-align: bottom;
+        text-align: center;
+        font: 700 120px/180px @font-family;
+        color: #d22856;
+        border: 13px solid #d22856;
+        border-radius: 50%;
+      };
+
+    };
+
+    &__item {
+      float: right;
+      width: 66%;
+      padding-left: 1%;
+      font: 400 18px/30px @font-family;
+    };
+
+    &__title {
+      margin-bottom: 10px;
+      font: 700 30px/36px @font-family;
+      color: #000;
+    };
+
+    & p {
+      margin-bottom: 10px;
+    };
+
+    & a {
+      color: #d22856;
+    };
+
+  }
+
+  .effect {
+    display: block;
+    background-color: @color-bg__section;
 
   }
 
