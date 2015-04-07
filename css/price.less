@@ -9,30 +9,139 @@
 
   &::before {
       content:"";
-      position: absolute;
-      top: -50px;
-      right: 0;
-      height: 90px;
-      width: 110%;
-      background-color: #fff;
-      transform: rotate(-6deg);
+        position: absolute;
+        top: -100px;
+        left: -5%;
+        height: 125px;
+        width: 150%;
+        background-color: #fff;
+        transform: rotate(-4deg);
   };
-
-  /*&__item {
-    display: inline-block;
-    position: relative;
-    width: 33%;
-    min-width: 280px;
-    vertical-align: top;
-    overflow: hidden;
-
-  };*/
 
 }
 
 .price-table {
-  /*width: 100%;
-  overflow: hidden;*/
+  position: relative;
+  width: 300%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &__header {
+    position: relative;
+    padding: 15px 0;
+    text-align: center;
+    background-color: @color-bg__header;
+    border-left: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+    z-index:  100;
+    overflow: hidden;
+
+
+    &--hit:before {
+      position: absolute;
+      content: "хит";
+      left: 0;
+      top: 0;
+      padding: 0 50px;
+      text-align: center;
+      font: 600 14px/30px @font-family;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: @color-hover;
+      transform: translate(-40px, 10px) rotate(-45deg);
+      z-index: 1;
+    };
+
+  };
+
+  &__title {
+    font: @font-h3;
+    text-transform: uppercase;
+    color: #fff;
+  };
+
+  &__cost {
+    font: 300 24px/40px @font-family;
+    text-transform: uppercase;
+    color: #fff;
+  };
+
+  &__cell {
+    position: relative;
+    padding: 0 20px;
+    font: 400 14px/59px @font-family;
+    text-transform: uppercase;
+    color: @color-bg__header;
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+
+    &:first-child {
+      display: none;
+    };
+
+  };
+
+  &__icon {
+    float: right;
+    height: 29px;
+    width: 29px;
+    margin: 15px 0;
+
+    &--yes {
+      background: #fff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAMAAAALimf+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/FBMVEUAAAA9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAACmFVsNAAAAUnRSTlMAUIBiSfjc+e0pNuzpOjDu+kAj4PRNHdFaDmgSuXQoCgSOVfzLFwalilK8CZ6ogr0IjaOUpAGFnGnFDweqj80U/tgiEMZtSPYfFczrNxvi8jPnvonPpQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADISURBVCjPfdBnUwIxFIXhpQlioYMFaQtIB7GjdFBEmu///zHuoDBh2Us+5eTJZHKPpsnLZj+ADpDR6eJIRjeeYwm9J5yeSXjuwx+QMBgiHJEwGoMLCS8NvJLwOg43m5BI7mLKwPQmZPRsTsX8LRS2qQilsqIVqCqxBvXGNt1BM6W+dQ8Pj//7J+Oq6R9NeP7bvcBryzTC2zu016jT6e5NmC+tJ7T16A8sChiOYPzxSWhi2c/XFN3F90yob76A5UoqV0vEfpx7h79VAx3KADMU4gAAAABJRU5ErkJggg==") 50% 0 no-repeat;
+    };
+
+    &--no {
+      background: #fff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEUAAADyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAADrmyZ7AAAAS3RSTlMADmQkC2gqetcnCbPDUf3hHwi1ieAltqIBXyuZ3SGdA2fjYNkKtJph2t+jY9wgBJvTuZzy/M7tlt6YAp9mB6H+4iOe2w1ifbtUkYx2fZrcAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAP1JREFUKM9tkelWwjAQhYeClUVqRZaigFIVkFXZxIqsKst9//dxaDldksyvm3OTbzJ3KKbFSVGJC50ukUzJTjqDK8oauDZF5yYH3BJpQL4gOEWgZLEoA8k7gYZ7y5WagUo1Sqs9nA+PBurVCC24aANPuiefX4CGFcI3gVZcovnMV9OjtcVROkC312faQA6AmW/vwLCviM0eAeMhKWsCTAsq4/Q3zsxUOx/cbybt4ZTbp+PmqctvvhwW87E7X1Df7Cw8OV9itRa24JwP5SBPj7Zx/IudJbbrwCmF8ZxnvifsNJTZlmf/4UQ30S0Q/bren0Dz++1oXz9YskX27PgPxIksRC8/Dz4AAAAASUVORK5CYII=") 50% 0 no-repeat;
+    };
+
+  };
+
+}
+
+.slider-price {
+  overflow: hidden;
+}
+
+@media (min-width: 1224px) {
+
+.price {
+  position: relative;
+  margin-bottom: 44px;
+  padding: 0 0 40px;
+  font-size: 0;
+  background-color:@color-bg__section;
+
+  &:before {
+    content:"";
+        position: absolute;
+        top: -115px;
+        left: -5%;
+        height: 150px;
+        width: 150%;
+        background-color: #fff;
+        transform: rotate(-4deg);
+
+  };
+
+  & .slider-control {
+    display: none;
+  };
+
+}
+
+.slider-price {
+
+  &__container {
+    padding: 160px 0 50px;
+  };
+
+}
+
+.price-table {
+  position: relative;
+  width: 100%;
 
   &__header {
     position: relative;
@@ -58,82 +167,169 @@
       background-color: @color-hover;
       transform: translate(-40px, 10px) rotate(-45deg);
       z-index: 1;
-      };
+    };
 
   };
 
   &__title {
-    font: @font-h3;
+    font: 700 18px/30px @font-family;
     text-transform: uppercase;
     color: #fff;
   };
 
   &__cost {
-    font: 300 24px/40px @font-family;
+    font: 300 24px/30px @font-family;
     text-transform: uppercase;
     color: #fff;
   };
 
   &__cell {
     position: relative;
-    min-width: 280px;
-    padding: 0 22px;
-    font: 400 14px/59px @font-family;
-    text-transform: uppercase;
+    width: 25%;
+    padding: 0 25px;
+    text-transform: none;
+    font-size: 0;
+    line-height: 32px;
+    text-align: center;
     color: @color-bg__header;
     background-color: #fff;
     border: 2px solid #e5e5e5;
     border-top: none;
 
-    &--yes::after,
-    &--no::after {
-      position: absolute;
-      top: 19px;
-      right: 19px;
-      width: 29px;
-      height: 29px;
-      font-size: 0;
+    &:first-child {
+      display: table-cell;
+      font: 400 18px/60px @font-family;
+      text-align: left;
     };
 
-    &--yes::after {
-      content: "да";
+    &--empty {
+      background-color: #f2f2f2;
+      border: none;
+    };
+
+  };
+
+
+  &__icon {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+    &--yes {
+      background: #fff url("../img/yes.svg") 50% 0 no-repeat;
+    };
+
+    &--no {
+      background: #fff url("../img/no.svg") 50% 0 no-repeat;
+    };
+
+  };
+
+}
+}
+
+@media (min-width: 768px) and (max-width: 1223px) {
+
+.price {
+  position: relative;
+  margin-bottom: 44px;
+  padding: 80px 0 40px;
+  font-size: 0;
+  background-color:@color-bg__section;
+
+  & .slider-control {
+    display: none;
+  };
+
+}
+
+.price-table {
+  position: relative;
+  width: 100%;
+
+  &__header {
+    position: relative;
+    padding: 7px 0;
+    text-align: center;
+    background-color: @color-bg__header;
+    border-left: 2px solid #e5e5e5;
+    border-right: 2px solid #e5e5e5;
+    z-index:  100;
+    overflow: hidden;
+
+
+    &--hit::before {
+      position: absolute;
+      content: "хит";
+      left: 0;
+      top: 0;
+      padding: 0 50px;
+      text-align: center;
+      font: 600 14px/30px @font-family;
+      color: #fff;
+      text-transform: uppercase;
+      background-color: @color-hover;
+      transform: translate(-47px, 4px) rotate(-45deg);
+      z-index: 1;
+    };
+
+  };
+
+  &__title {
+    font: 700 16px/30px @font-family;
+    text-transform: uppercase;
+    color: #fff;
+  };
+
+  &__cost {
+    font: 300 18px/30px @font-family;
+    text-transform: uppercase;
+    color: #fff;
+  };
+
+  &__cell {
+    position: relative;
+    width: 25%;
+    padding: 0 15px;
+    text-transform: none;
+    font-size: 0;
+    line-height: 32px;
+    text-align: center;
+    color: @color-bg__header;
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-top: none;
+
+    &:first-child {
+      display: table-cell;
+      font: 400 14px/45px @font-family;
+    };
+
+    &--empty {
+      background-color: #f2f2f2;
+      border: none;
+    };
+
+
+  };
+
+
+  &__icon {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+    &--yes {
       background: #fff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAMAAAALimf+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/FBMVEUAAAA9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQ9xkQAAACmFVsNAAAAUnRSTlMAUIBiSfjc+e0pNuzpOjDu+kAj4PRNHdFaDmgSuXQoCgSOVfzLFwalilK8CZ6ogr0IjaOUpAGFnGnFDweqj80U/tgiEMZtSPYfFczrNxvi8jPnvonPpQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAADISURBVCjPfdBnUwIxFIXhpQlioYMFaQtIB7GjdFBEmu///zHuoDBh2Us+5eTJZHKPpsnLZj+ADpDR6eJIRjeeYwm9J5yeSXjuwx+QMBgiHJEwGoMLCS8NvJLwOg43m5BI7mLKwPQmZPRsTsX8LRS2qQilsqIVqCqxBvXGNt1BM6W+dQ8Pj//7J+Oq6R9NeP7bvcBryzTC2zu016jT6e5NmC+tJ7T16A8sChiOYPzxSWhi2c/XFN3F90yob76A5UoqV0vEfpx7h79VAx3KADMU4gAAAABJRU5ErkJggg==") 50% 0 no-repeat;
     };
 
-    &--no::after {
-      content: "нет";
+    &--no {
       background: #fff url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEUAAADyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWybyWyYAAADrmyZ7AAAAS3RSTlMADmQkC2gqetcnCbPDUf3hHwi1ieAltqIBXyuZ3SGdA2fjYNkKtJph2t+jY9wgBJvTuZzy/M7tlt6YAp9mB6H+4iOe2w1ifbtUkYx2fZrcAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAP1JREFUKM9tkelWwjAQhYeClUVqRZaigFIVkFXZxIqsKst9//dxaDldksyvm3OTbzJ3KKbFSVGJC50ukUzJTjqDK8oauDZF5yYH3BJpQL4gOEWgZLEoA8k7gYZ7y5WagUo1Sqs9nA+PBurVCC24aANPuiefX4CGFcI3gVZcovnMV9OjtcVROkC312faQA6AmW/vwLCviM0eAeMhKWsCTAsq4/Q3zsxUOx/cbybt4ZTbp+PmqctvvhwW87E7X1Df7Cw8OV9itRa24JwP5SBPj7Zx/IudJbbrwCmF8ZxnvifsNJTZlmf/4UQ30S0Q/bren0Dz++1oXz9YskX27PgPxIksRC8/Dz4AAAAASUVORK5CYII=") 50% 0 no-repeat;
-
     };
 
   };
 
 }
-
-.slider-price {
-  overflow: hidden;
-  &--active {
-    display: inline-block;
-  };
-
-  &__container {
-    margin:0 auto 29px;
-    position: relative;
-    /*width: 300%;*/
-    left: -87%;
-    transform: translateX(-87%);
-  };
-
-}
-
-@media (min-width: 680px) and (max-width: 980px) {
-
-  .price {
-
-    &::before {
-      top: 140px;
-      transform: rotate(-4deg);
-    };
-  }
-
 }

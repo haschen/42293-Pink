@@ -2,21 +2,18 @@
 
 .reviews {
   position: relative;
-  margin-bottom: 38px;
+  /*margin-bottom: 38px;*/
   padding-top: 48px;
   text-align: center;
 }
 
 .reviews-item {
   display: none;
+  position: relative;
 
   &--active {
-    display: block;
-  };
-
-  &__title {
-    margin-bottom: 13px;
-    font: @font-h3;
+    display: flex;
+    flex-direction: column;
   };
 
   &__text {
@@ -27,13 +24,14 @@
 }
 
 .review-persone {
-  display: none;
+  margin-bottom: 13px;
 
   &__name {
-    font: 700 20px/30px @font-family;
+     font: @font-h3;
   };
 
   &__info {
+    display: none;
     color: #283645;
   };
 }
@@ -42,16 +40,20 @@
   margin-bottom: 29px;
 }
 
-@media (min-width: 680px) and (max-width: 980px) {
+@media (min-width: 768px) and (max-width: 1223px) {
 
   .reviews {
     position: relative;
     margin-bottom: 38px;
     padding-top: 22px;
     text-align: center;
-}
+  }
 
   .reviews-item {
+
+    &--active {
+      flex-direction: column-reverse;
+    };
 
     &__text {
       margin-bottom: 35px;
@@ -59,17 +61,78 @@
       color: #283645;
     };
 
-    &__title {
-      display: none;
-    };
-
   }
+
   .review-persone {
-    display: block;
+    margin-bottom: 0;
 
     &__name {
-      padding-bottom: 5px;
+       font: @font-h3;
+       margin-bottom: 10px;
     };
+
+    &__info {
+      display: block;
+    };
+
+  };
+
+}
+
+@media (min-width: 1224px) {
+
+  .reviews {
+    position: relative;
+    /*margin-bottom: 38px;*/
+    padding-top: 0;
+    text-align: center;
+
+    & .slider-control {
+      display: none;
+    }
+
   }
 
+  .reviews-item {
+    padding: 180px 100px 0;
+
+    &:before {
+      content: "\201c";
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      font: 400 240px/1px "Georgia", "Arial", sans-serif;
+      color: #efefef;
+      /*background: transparent url("../img/quotes.svg") no-repeat;*/
+      transform: translateX(-50%);
+
+    };
+
+    &--active {
+      flex-direction: column-reverse;
+    };
+
+    &__text {
+      margin-bottom: 35px;
+      font: 400 18px/30px @font-family;
+      color: #283645;
+    };
+
+  }
+
+  .review-persone {
+    margin-bottom: 0;
+
+    &__name {
+       font: 700 24px/30px @font-family;
+       margin-bottom: 5px;
+    };
+
+    &__info {
+      display: block;
+      font: 400 18px/30px @font-family;
+      color: #283645;
+    };
+
+  };
 }
