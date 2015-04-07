@@ -1,13 +1,9 @@
 @import "variable.less";
 
-.page-footer {
-  display: none;
-}
 
-@media (min-width: 768px) and (max-width: 1223px) {
 
   .page-footer {
-    display: block;
+    display: none;
     position: relative;
     padding: 45px 0;
     background-color: #fff;
@@ -55,12 +51,25 @@
 
     &__item {
       display: inline-block;
+      position: relative;
       vertical-align: middle;
       height: 51px;
       width: 51px;
       margin-right: 10px;
       border: 3px solid rgba(40,54,69,.1);
       border-radius: 50%;
+
+      & svg {
+        position: absolute;
+        top: 14px;
+        left: 17px;
+        height: 19px;
+        fill: #d22856;
+      };
+
+      &:hover svg {
+        fill: #283645;
+      };
 
       &:last-child {
         margin-right: 0;
@@ -70,35 +79,67 @@
         border-color: rgba(40, 54, 69, 1);
       };
 
-      &--facebook {
-        background: transparent url("../img/facebook.svg") 50% 50% no-repeat;
-      };
-
-      &--twitter {
-        background: transparent url("../img/twitter.svg") 50% 50% no-repeat;
-      };
-
-      &--youtube {
-        background: transparent url("../img/youtube.svg") 50% 50% no-repeat;
-      };
-
     };
 
   }
 
   .autor-link {
+    position: relative;
     width: 26px;
     height: 30px;
     margin: 0 10px;
-    background: transparent url("../img/glukhanko.svg") 50% 50% no-repeat;
+
+    & svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 30px;
+      fill: #d22856;
+    };
+
+    &:hover svg {
+      fill: #283645;
+    };
+
   }
 
   .academy-link {
+    position: relative;
     width: 27px;
     height: 34px;
     margin-left: 10px;
-    background: transparent url("../img/htmlacademy.svg") 50% 50% no-repeat;
+
+    & svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 26px;
+      height: 30px;
+      fill: #d22856;
+    };
+
+    &:hover svg {
+      fill: #283645;
+    };
   }
+
+
+@media (min-width: 768px) and (max-width: 1223px) {
+
+  .page-footer {
+    display: block;
+  }
+
+}
+
+@media only screen and (min-resolution: 1.5dppx) and (min-width: 768px) {
+
+  .page-footer__logo {
+    background: transparent url("../img/footer-logo--700-2x.png") 0 0 no-repeat;
+    background-size: 145px 40px;
+  }
+
 }
 
 @media (min-width: 1224px) {
@@ -114,6 +155,20 @@
     &__social-list {
       width: 33%;
     };
+
+    &__copyright {
+      width: 31%;
+    };
+
+  }
+
+}
+
+@media only screen and (min-resolution: 1.5dppx) and (min-width: 1224px) {
+
+  .page-footer__logo {
+    background: transparent url("../img/footer-logo--1000-2x.png") 0 0 no-repeat;
+    background-size: 146px 40px;
   }
 
 }
