@@ -2,20 +2,50 @@
 <html lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Pink</title>
+  <meta charset="utf-8">
+  <title>HTML Academy: Pink</title>
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-
+  <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
 
 <body>
 
   <svg style="display:none">
+    <symbol viewBox="0 0 49.945 24.007" id="menu-burger">
+      <g id="miu">
+        <g id="editor_list_view_hambuger_menu_glyph">
+          <g>
+            <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671
+              c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98
+              c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z
+               M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01
+              v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+          </g>
+          <g>
+            <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.138,1.01h47.671
+              c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98
+              c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z
+               M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.138,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01
+              v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+          </g>
+        </g>
+      </g>
+    </symbol>
+    <symbol viewBox="0 0 23.866 23.866" id="menu-cross">
+      <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.413,0.079,21.223,0,21.023,0s-0.39,0.079-0.53,0.22l-8.56,8.56L3.373,0.22c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.061l2.093,2.094c0.141,0.141,0.331,0.22,0.53,0.22c0.199,0,0.39-0.079,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.141,0.331,0.22,0.53,0.22s0.39-0.079,0.53-0.22l2.093-2.094c0.293-0.293,0.293-0.768,0-1.061L15.087,11.933z"/>
+    </symbol>
+    <symbol viewBox="-3 -3 57.5 109" id="slider-arrow--left">
+      <line stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="51.5" x2="51.5" y2="0"/>
+      <line stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="51.5" x2="51.5" y2="103"/>
+    </symbol>
+    <symbol viewBox="-3 -3 57.5 109" id="slider-arrow--right">
+      <line stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="51.5" y1="51.5" x2="0" y2="0"/>
+      <line stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="51.5" y1="51.5" x2="0" y2="103"/>
+    </symbol>
     <symbol viewBox="0 0 8.673 18.944" id="icon-facebook">
       <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786C5.765,5.7,5.75,3.709,6.275,3.357z"/>
     </symbol>
@@ -42,13 +72,25 @@
       <a href="#" class="logo"></a>
 
       <!-- main-menu -->
-      <nav class="main-nav main-nav--active clearfix">
-        <a href="#" class="main-nav__toggle"><span></span></a>
-        <ul class="main-nav__list main-nav--active__list">
-          <li><a class="main-nav__item main-nav--active__item main-nav--active__item--active" href="#">Информация</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navinfo">Возможности</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navrewievs">Отзывы</a></li>
-          <li><a class="main-nav__item main-nav--active__item" href="#navprice">Стоимость</a></li>
+      <nav class="main-nav clearfix">
+        <a href="#" class="main-nav__toggle">
+          <svg width="50" height="24">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-burger"/>
+          </svg>
+        </a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav--active__item clearfix">
+            <a href="#" class="logo logo--active"></a>
+            <a href="#" class="main-nav__toggle main-nav__toggle--cross">
+              <svg width="24" height="24">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-cross"/>
+              </svg>
+            </a>
+          </li>
+          <li class="main-nav__item main-nav--active__item main-nav--active__item--active"><a href="#">Информация</a></li>
+          <li class="main-nav__item main-nav--active__item"><a href="#navinfo">Возможности</a></li>
+          <li class="main-nav__item main-nav--active__item"><a href="#navrewievs">Отзывы</a></li>
+          <li class="main-nav__item main-nav--active__item"><a href="#navprice">Стоимость</a></li>
         </ul>
 
       </nav>
@@ -101,21 +143,21 @@
 
           <!-- item -->
           <div class="information-item">
-            <img class="information-item__img" src="../img/information-item1.png">
+            <img class="information-item__img" src="img/information-item1.png" alt="">
             <h3 class="information-item__title">Поднимает настроение</h3>
             <p class="information-item__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
           </div>
 
           <!-- item -->
           <div class="information-item">
-            <img class="information-item__img" src="../img/information-item2.png">
+            <img class="information-item__img" src="img/information-item2.png" alt="">
             <h3 class="information-item__title">Меняет мир вокруг</h3>
             <p class="information-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
           </div>
 
           <!-- item -->
           <div class="information-item">
-            <img class="information-item__img" src="../img/information-item3.png">
+            <img class="information-item__img" src="img/information-item3.png" alt="">
             <h3 class="information-item__title">Заводит новых друзей</h3>
             <p class="information-item__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
           </div>
@@ -134,7 +176,7 @@
         <div class="effect__item">
           <h2 class="effect__title">Эффект на 24 часа!</h2>
           <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class"effect__link" href="#">Узнать больше об исследовании</a>
+          <a class="effect__link" href="#">Узнать больше об исследовании</a>
         </div>
     </div>
 
@@ -176,11 +218,21 @@
 
       </div>
 
+      <a href="#" class="slider-reviews__nav slider-reviews__nav--left">
+        <svg width="22" height="42">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slider-arrow--left"/>
+        </svg>
+      </a>
+      <a href="#" class="slider-reviews__nav slider-reviews__nav--right">
+        <svg width="22" height="42">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#slider-arrow--right"/>
+        </svg>
+      </a>
       <!-- controls -->
       <div class="slider-control">
-        <a href"#" class="slider-control__item slider-control__item--active"></a>
-        <a href"#" class="slider-control__item"></a>
-        <a href"#" class="slider-control__item"></a>
+        <a href="#" class="slider-control__item slider-control__item--active"></a>
+        <a href="#" class="slider-control__item"></a>
+        <a href="#" class="slider-control__item"></a>
       </div>
 
     </div>
@@ -277,9 +329,9 @@
 
       <!-- controls -->
       <div class="slider-control">
-        <a href"#" class="slider-control__item"></a>
-        <a href"#" class="slider-control__item slider-control__item--active"></a>
-        <a href"#" class="slider-control__item"></a>
+        <a href="#" class="slider-control__item"></a>
+        <a href="#" class="slider-control__item slider-control__item--active"></a>
+        <a href="#" class="slider-control__item"></a>
       </div>
 
     </div>
@@ -326,18 +378,18 @@
 
       <div class="social-list">
         <a href="#" class="social-list__item social-list__item--facebook">
-          <svg width="9" heiht="19">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook">
+          <svg width="9" height="19">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"/>
           </svg>
         </a>
         <a href="#" class="social-list__item social-list__item--twitter">
-          <svg width="18" heiht="15">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter">
+          <svg width="18" height="19">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"/>
           </svg>
         </a>
         <a href="#" class="social-list__item social-list__item--youtube">
-          <svg width="15" heiht="14">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube">
+          <svg width="15" height="19">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"/>
           </svg>
         </a>
       </div>
@@ -346,15 +398,15 @@
         <span>Website by </span>
         <a href="glukhanko.ru" class="autor-link">
           Glukhanko.ru
-          <svg width="26" heiht="30">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-glukhanko">
+          <svg width="26" height="30">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-glukhanko"/>
           </svg>
         </a>
         <span> for </span>
         <a href="htmlacademy.ru" class="academy-link">
           htmlacademy.ru
-          <svg width="26" heiht="30">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-academy">
+          <svg width="26" height="30">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-academy"/>
           </svg>
         </a>
       </div>
@@ -363,24 +415,9 @@
   </footer>
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-  <script>
-    function initialize() {
-      var mapOptions = {
-        zoom: 17,
-        center: new google.maps.LatLng(59.936326, 30.321085)
-      }
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-                                    mapOptions);
-      var image = "../img/map-point.png";
-      var myLatLng = new google.maps.LatLng(59.936326, 30.321085);
-      var beachMarker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        icon: image
-      });
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
-        <!-- <script src="js/script.js"></script> -->
+  <script src="js/map.js"></script>
+  <script src="js/burger.js"></script>
+
 </body>
 </html>
+

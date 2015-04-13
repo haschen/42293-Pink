@@ -1,7 +1,5 @@
 @import "variable.less";
 
-
-
   .page-footer {
     display: none;
     position: relative;
@@ -15,6 +13,7 @@
       height: 40px;
       text-align: left;
       background: transparent url("../img/footer-logo--700.png") 0 0 no-repeat;
+      background-size: 145px 40px;
     };
 
     & .social-list {
@@ -46,10 +45,55 @@
 
   }
 
-  .social-list {
-    padding: 0;
+@media (min-width: 768px) and (max-width: 1223px) {
 
-    &__item {
+  .page-footer {
+    display: block;
+  }
+
+}
+
+@media (min-width: 1224px) {
+
+  .page-footer {
+    display: block;
+
+    &__logo {
+      width: 33%;
+      background: transparent url("../img/footer-logo--1000.png") 0 0 no-repeat;
+    };
+
+    &__social-list {
+      width: 33%;
+    };
+
+    &__copyright {
+      width: 31%;
+    };
+
+  }
+
+}
+
+@media only screen and (min-resolution: 1.5dppx) and (min-width: 768px) {
+
+  .page-footer__logo {
+    background-image: url("../img/footer-logo--700-2x.png");
+  }
+
+}
+
+@media only screen and (min-resolution: 1.5dppx) and (min-width: 1224px) {
+
+  .page-footer__logo {
+    background-image: url("../img/footer-logo--1000-2x.png");
+  }
+
+}
+.social-list {
+  padding: 0;
+
+  &__item {
       display: inline-block;
       position: relative;
       vertical-align: middle;
@@ -62,9 +106,10 @@
       & svg {
         position: absolute;
         top: 14px;
-        left: 17px;
+        left: 50%;
         height: 19px;
         fill: #d22856;
+        transform: translateX(-50%);
       };
 
       &:hover svg {
@@ -123,52 +168,3 @@
       fill: #283645;
     };
   }
-
-
-@media (min-width: 768px) and (max-width: 1223px) {
-
-  .page-footer {
-    display: block;
-  }
-
-}
-
-@media only screen and (min-resolution: 1.5dppx) and (min-width: 768px) {
-
-  .page-footer__logo {
-    background: transparent url("../img/footer-logo--700-2x.png") 0 0 no-repeat;
-    background-size: 145px 40px;
-  }
-
-}
-
-@media (min-width: 1224px) {
-
-  .page-footer {
-    display: block;
-
-    &__logo {
-      width: 33%;
-      background: transparent url("../img/footer-logo--1000.png") 0 0 no-repeat;
-    };
-
-    &__social-list {
-      width: 33%;
-    };
-
-    &__copyright {
-      width: 31%;
-    };
-
-  }
-
-}
-
-@media only screen and (min-resolution: 1.5dppx) and (min-width: 1224px) {
-
-  .page-footer__logo {
-    background: transparent url("../img/footer-logo--1000-2x.png") 0 0 no-repeat;
-    background-size: 146px 40px;
-  }
-
-}

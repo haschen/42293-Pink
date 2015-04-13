@@ -12,61 +12,81 @@
     float: left;
     height: 24px;
     width: 75px;
+    left: 6%;
     text-decoration: none;
     text-transform: uppercase;
     color: #fff;
     background: transparent url("../img/logo--320.png") 0 0 no-repeat;
+
+    &--active {
+      position: absolute;
+      float: none;
+      top: 20px;
+    };
+
   }
 
   .main-nav {
     padding: 0;
 
     &__toggle {
+      position: relative;
       float: right;
-      right: 20px;
+      right: 0px;
       height: 24px;
       width: 50px;
-      background-image: linear-gradient(
-        #fff 4px,
-        transparent 4px,
-        transparent 10px,
-        #fff 10px,
-        #fff 14px,
-        transparent 14px,
-        transparent 20px,
-        #fff 20px
-      );
 
-      &:hover {
-        background-image: linear-gradient(
-          @color-hover 4px,
-          transparent 4px,
-          transparent 10px,
-          @color-hover 10px,
-          @color-hover 14px,
-          transparent 14px,
-          transparent 20px,
-          @color-hover 20px
-        );
+      & svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        fill: #fff;
+
+        &:hover {
+          fill: @color-hover;
+        };
+
       };
 
     };
 
     &__list {
+      position: absolute;
       display: none;
+      top: -21px;
+      left: 0;
+      width: 100%;
+      padding: 0;
+      text-align: center;
     };
 
     &--active {
 
+      & .main-nav__list {
+        display: block;
+      };
+
       &__item {
         display: block;
-        font: 700 18px/62px @font-family;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
         background-color: @color-bg__header;
         border-top: 1px solid rgba(255,255,255, .15);
         border-bottom: 1px solid #000;
+
+        &:first-child {
+          position: relative;
+          padding: 19px 0;
+        };
+
+        & a {
+          font: 700 18px/62px @font-family;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #fff;
+          &:hover {
+            color: @color-hover;
+          };
+        };
+
       };
 
     };
@@ -102,13 +122,12 @@
 @media (min-width: 1224px) {
 
   .page-header {
-    padding: 28px 0;
+    padding: 28px 0 0;
   }
 
   .logo {
     height: 40px;
     width: 145px;
-    margin-right: 198px;
     background: transparent url("../img/logo--1000.png") 0 0 no-repeat;
   }
 
@@ -122,6 +141,7 @@
     };
 
     &__list {
+        position: relative;
         display: block;
         padding: 0;
         list-style: none;
@@ -129,6 +149,9 @@
         & li {
           float: left;
           margin-right: 66px;
+           &:first-child {
+            display: none;
+           };
 
           &:last-child {
             margin-right: 0;
@@ -149,6 +172,7 @@
       &:hover,
       &--active {
         border-bottom-color: #fff;
+        color: #fff;
       };
 
     };
